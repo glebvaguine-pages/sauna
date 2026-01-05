@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>7×5 Sauna + Cold Plunge Build - Phase Tracker</title>
+  <title>7×6×7.5 Finnish Sauna Build - Complete Project Tracker</title>
   <style>
     :root {
       --primary: #208080;
@@ -14,6 +14,7 @@
       --text-dim: #9ca3af;
       --success: #10b981;
       --warn: #f59e0b;
+      --error: #ef4444;
     }
 
     * {
@@ -47,20 +48,14 @@
       margin-bottom: 12px;
     }
 
-    .hero-diagram {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 16px;
-      margin: 20px auto;
-      max-width: 600px;
-      text-align: center;
-    }
-
-    .hero-diagram img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 6px;
+    .spec-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.85em;
+      margin-right: 8px;
+      margin-bottom: 8px;
     }
 
     .container {
@@ -136,6 +131,56 @@
       margin-top: 20px;
       margin-bottom: 12px;
       font-size: 1.1em;
+    }
+
+    .rule-highlight {
+      background: rgba(16, 185, 129, 0.15);
+      border-left: 4px solid var(--success);
+      padding: 16px;
+      border-radius: 6px;
+      margin: 16px 0;
+    }
+
+    .rule-highlight strong {
+      color: var(--success);
+    }
+
+    .critical-warning {
+      background: rgba(239, 68, 68, 0.15);
+      border-left: 4px solid var(--error);
+      padding: 16px;
+      border-radius: 6px;
+      margin: 16px 0;
+    }
+
+    .critical-warning strong {
+      color: var(--error);
+    }
+
+    .measurement-box {
+      background: rgba(32, 128, 128, 0.1);
+      padding: 16px;
+      border-radius: 6px;
+      margin: 12px 0;
+      border: 1px solid rgba(32, 128, 128, 0.3);
+    }
+
+    .measurement-box strong {
+      color: var(--primary);
+      font-size: 1.1em;
+    }
+
+    .heater-option {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 16px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+
+    .heater-option h4 {
+      color: var(--primary);
+      margin-bottom: 8px;
     }
 
     .timeline {
@@ -244,52 +289,51 @@
       background: rgba(32, 128, 128, 0.1);
     }
 
-    .critical {
-      background: rgba(255, 193, 7, 0.15);
-      border-left: 4px solid #ffc107;
-      padding: 12px;
-      border-radius: 6px;
-      margin: 12px 0;
-    }
-
-    .critical strong {
-      color: #ffc107;
-    }
-
-    .recommendation {
-      background: rgba(16, 185, 129, 0.1);
-      border-left: 4px solid var(--success);
-      padding: 12px;
-      border-radius: 6px;
-      margin: 12px 0;
-    }
-
-    .recommendation strong {
-      color: var(--success);
-    }
-
-    .materials {
+    .dimension-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 12px;
-      margin: 12px 0;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
     }
 
-    .material-item {
+    .dimension-card {
       background: var(--card-bg);
-      padding: 12px;
-      border-radius: 6px;
       border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
     }
 
-    .material-name {
+    .dimension-value {
+      font-size: 1.8em;
       font-weight: 600;
       color: var(--primary);
-      margin-bottom: 4px;
+      margin: 8px 0;
     }
 
-    .material-qty {
-      font-size: 0.85em;
+    .dimension-label {
+      font-size: 0.9em;
+      color: var(--text-dim);
+    }
+
+    .image-container {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 8px;
+    }
+
+    .image-caption {
+      font-size: 0.9em;
       color: var(--text-dim);
     }
 
@@ -321,1245 +365,705 @@
 </head>
 <body>
   <header>
-    <h1>🔨 Sauna + Cold Plunge Build Tracker</h1>
-    <p><strong style="color: #10b981;">★ RECOMMENDED: 6×7 ft sauna</strong> + Coldture Classic plunge under 10×8 ft gazebo | Full-length benches for lying down | Complete phase breakdown with costs & checklists</p>
+    <h1>🇫🇮 Vaguine Sauna Build - Complete Project</h1>
+    <p>7 ft wide × 6 ft deep × 7.5 ft tall | 315 ft³ | Professional Cedar Sauna Design</p>
+    <div>
+      <span class="spec-badge">315 ft³ Volume</span>
+      <span class="spec-badge">6-7 kW Heater</span>
+      <span class="spec-badge">42 sq ft floor</span>
+      <span class="spec-badge">Professional Grade</span>
+    </div>
   </header>
 
   <div class="container">
     <div class="tabs">
-      <button class="tab-btn active" onclick="switchTab('overview')">Overview & Layout</button>
-      <button class="tab-btn" onclick="switchTab('sizing')">Sizing Guide (5×7 vs 6×7)</button>
-      <button class="tab-btn" onclick="switchTab('phase1')">Phase 1: Structure & Framing</button>
-      <button class="tab-btn" onclick="switchTab('phase2')">Phase 2: Insulation & Vapor</button>
-      <button class="tab-btn" onclick="switchTab('phase3')">Phase 3: Cedar Interior</button>
-      <button class="tab-btn" onclick="switchTab('phase4')">Phase 4: Benches & Details</button>
-      <button class="tab-btn" onclick="switchTab('phase5')">Phase 5: Heater & Guard</button>
-      <button class="tab-btn" onclick="switchTab('phase6')">Phase 6: Exterior & Finishing</button>
-    </div>
-
-    <!-- SIZING GUIDE TAB -->
-    <div id="sizing" class="tab-content">
-      <div class="phase-card">
-        <h2>✓ Sauna Sizing Recommendation: 6×7 ft is OPTIMAL</h2>
-        <p style="margin-bottom: 20px; color: var(--text-dim);"><strong style="color: #10b981;">The 6×7×7 ft sauna is the professional industry standard for home use.</strong> This section explains why the 6 ft width (vs 5 ft) makes a critical difference in comfort, safety, and usability, and why it's worth the modest additional cost.</p>
-
-        <h3>Why 6 ft Wide Changes Everything</h3>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
-          <!-- 5x7 Analysis -->
-          <div style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 16px;">
-            <h4 style="color: #ff9999; margin-bottom: 12px; text-align: center;">❌ 5 ft Wide (NOT RECOMMENDED)</h4>
-            <div style="background: rgba(32, 128, 128, 0.1); padding: 12px; border-radius: 6px; margin-bottom: 12px;">
-              <p style="margin: 0; font-size: 0.9em;"><strong>Interior Dimensions:</strong> 5 ft W × 7 ft L × 7 ft H</p>
-              <p style="margin: 8px 0 0 0; font-size: 0.9em;"><strong>Volume:</strong> 245 ft³</p>
-            </div>
-            <p style="margin-bottom: 12px; font-size: 0.9em;"><strong style="color: #ff9999;">⚠️ Problem Zone:</strong></p>
-            <ul style="margin: 0 0 12px 0; padding-left: 16px; font-size: 0.85em; line-height: 1.8;">
-              <li><strong>Upper Bench (24" deep):</strong> Takes up 2 ft of the 5 ft width</li>
-              <li><strong>Lower Bench (18" deep):</strong> Takes up 1.5 ft</li>
-              <li><strong>Remaining width in front:</strong> Only 2.5 ft</li>
-              <li><strong>Heater + Guard Rail:</strong> Requires ~30" width minimum</li>
-              <li><strong>Result:</strong> Heater footprint (2.5 ft wide) nearly fills the available floor space</li>
-            </ul>
-            <div class="critical" style="margin: 0; padding: 12px; margin-top: 12px;">
-              <p style="margin: 0; font-size: 0.9em;"><strong>❌ Tight Squeeze:</strong> Only ~1–1.5 ft free floor space on each side of heater. Users have minimal room to step around heater guard rail. Not ideal for comfort or safety.</p>
-            </div>
-          </div>
-
-          <!-- 6x7 Analysis -->
-          <div style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 16px; border: 2px solid #10b981;">
-            <h4 style="color: #10b981; margin-bottom: 12px; text-align: center;">✓ 6 ft Wide (RECOMMENDED STANDARD)</h4>
-            <div style="background: rgba(32, 128, 128, 0.1); padding: 12px; border-radius: 6px; margin-bottom: 12px;">
-              <p style="margin: 0; font-size: 0.9em;"><strong>Interior Dimensions:</strong> 6 ft W × 7 ft L × 7 ft H</p>
-              <p style="margin: 8px 0 0 0; font-size: 0.9em;"><strong>Volume:</strong> 294 ft³</p>
-            </div>
-            <p style="margin-bottom: 12px; font-size: 0.9em;"><strong style="color: #10b981;">✓ Comfortable Zone:</strong></p>
-            <ul style="margin: 0 0 12px 0; padding-left: 16px; font-size: 0.85em; line-height: 1.8;">
-              <li><strong>Upper Bench (24" deep):</strong> Takes up 2 ft of the 6 ft width</li>
-              <li><strong>Lower Bench (18" deep):</strong> Takes up 1.5 ft</li>
-              <li><strong>Remaining width in front:</strong> 2.5 ft</li>
-              <li><strong>Heater + Guard Rail:</strong> ~30" width + clearance</li>
-              <li><strong>Result:</strong> Comfortable 6–12" clearance on each side</li>
-            </ul>
-            <div class="recommendation" style="margin: 0; padding: 12px; margin-top: 12px;">
-              <p style="margin: 0; font-size: 0.9em;"><strong>✓ Proper Spacing:</strong> ~2 ft of usable floor space between bench and heater guard. Users can safely walk around, adjust position, and load rocks. Meets safety and comfort standards.</p>
-            </div>
-          </div>
-        </div>
-
-        <h3>Visual References</h3>
-        <div style="display: grid; grid-template-columns: 1fr; gap: 16px; margin: 20px 0;">
-          <div style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 12px; text-align: center;">
-            <img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/b8d2bcd7-f51f-4d40-9b6a-b300a4eb3598.png" style="width: 100%; max-width: 600px; height: auto; border-radius: 6px; margin-bottom: 8px;" alt="5x7 vs 6x7 comparison"/>
-            <p style="font-size: 0.85em; color: var(--text-dim); margin: 0;">Floor Plan Comparison - Shows actual spacing differences</p>
-          </div>
-          <div style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 12px; text-align: center;">
-            <img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/c505839d-512d-4ac8-9094-2628e6da4f18.png" style="width: 100%; max-width: 600px; height: auto; border-radius: 6px; margin-bottom: 8px;" alt="Space analysis"/>
-            <p style="font-size: 0.85em; color: var(--text-dim); margin: 0;">Space Analysis - Bench depth, heater footprint, and circulation zones</p>
-          </div>
-          <div style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 12px; text-align: center;">
-            <img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/f23dd4e5-937a-45a2-948d-f52115a6bfc6.png" style="width: 100%; max-width: 600px; height: auto; border-radius: 6px; margin-bottom: 8px;" alt="Cost comparison"/>
-            <p style="font-size: 0.85em; color: var(--text-dim); margin: 0;">Cost & Capacity Comparison - Materials, heater sizing, and user capacity</p>
-          </div>
-        </div>
-
-        <h3>Detailed Comparison Table</h3>
-        <table>
-          <tr>
-            <th>Dimension</th>
-            <th>5 ft Wide (5×7 ft)</th>
-            <th>6 ft Wide (6×7 ft)</th>
-            <th>Impact</th>
-          </tr>
-          <tr>
-            <td><strong>Interior Volume</strong></td>
-            <td>245 ft³</td>
-            <td>294 ft³</td>
-            <td style="color: #10b981;">+20% more space (6×7)</td>
-          </tr>
-          <tr>
-            <td><strong>Heater Size (Recommended)</strong></td>
-            <td>5–6 kW</td>
-            <td>6–7 kW</td>
-            <td style="color: var(--text-dim);">Slightly larger unit for 6×7</td>
-          </tr>
-          <tr>
-            <td><strong>Floor Space After Benches</strong></td>
-            <td>~2.5 ft wide</td>
-            <td>~3.5 ft wide</td>
-            <td style="color: #10b981;">+1 ft more usable space (6×7)</td>
-          </tr>
-          <tr>
-            <td><strong>Clearance Around Heater</strong></td>
-            <td>Minimal (4-6")</td>
-            <td>Comfortable (12-18")</td>
-            <td style="color: #10b981;">Better airflow & safety (6×7)</td>
-          </tr>
-          <tr>
-            <td><strong>Max Users (Comfortably)</strong></td>
-            <td>1–2 people</td>
-            <td>2–3 people</td>
-            <td style="color: #10b981;">Fits more users (6×7)</td>
-          </tr>
-          <tr>
-            <td><strong>Material Cost (Sauna Only)</strong></td>
-            <td>$4,200–$6,800</td>
-            <td>$4,650–$7,560</td>
-            <td style="color: #ff9999;">+$450–$760 for 6×7</td>
-          </tr>
-          <tr>
-            <td><strong>Heater Cost</strong></td>
-            <td>$800–$1,200 (5-6 kW)</td>
-            <td>$900–$1,500 (6-7 kW)</td>
-            <td style="color: #ff9999;">+$100–$300 for larger unit</td>
-          </tr>
-          <tr>
-            <td><strong>Cedar Materials (Interior)</strong></td>
-            <td>~450 lin ft</td>
-            <td>~500 lin ft</td>
-            <td style="color: #ff9999;">+~$150–$200 more cedar (6×7)</td>
-          </tr>
-          <tr>
-            <td><strong>Composite Exterior</strong></td>
-            <td>~155 lin ft</td>
-            <td>~170 lin ft</td>
-            <td style="color: #ff9999;">+~$50–$80 more composite (6×7)</td>
-          </tr>
-          <tr style="background: rgba(32, 128, 128, 0.2); font-weight: bold;">
-            <td><strong>Total Cost Difference</strong></td>
-            <td colspan="2"><strong>6×7 costs ~$700–$1,000 more than 5×7</strong></td>
-            <td style="color: #10b981;">Worth it for comfort & usability</td>
-          </tr>
-        </table>
-
-        <h3>Key Considerations by Size</h3>
-        
-        <h4 style="color: var(--warn); margin-top: 20px;">5×7 ft Sauna - Best For:</h4>
-        <ul style="padding-left: 20px; margin-bottom: 20px;">
-          <li><strong>Solo use:</strong> Single person enjoying solitude (no space concerns)</li>
-          <li><strong>Couples:</strong> Two people on benches, minimal floor movement</li>
-          <li><strong>Budget-conscious:</strong> ~$700–$1,000 less expensive</li>
-          <li><strong>Tight gazebo layout:</strong> Fits snugly if gazebo space is limited</li>
-        </ul>
-
-        <div class="critical" style="background: rgba(255, 193, 7, 0.15); border-left: 4px solid #ffc107; padding: 12px; border-radius: 6px; margin-bottom: 20px;">
-          <p style="margin: 0; font-size: 0.9em;"><strong>⚠️ 5×7 ft Drawback:</strong> The front area becomes cramped with heater + guard rail. Users can't comfortably move around the heater, and the space feels claustrophobic for more than 2 people. Loading sauna rocks or exiting when the heater is on becomes trickier. **Only recommended for solo/couple use with realistic expectations.**</p>
-        </div>
-
-        <h4 style="color: #10b981; margin-top: 20px;">6×7 ft Sauna - Best For:</h4>
-        <ul style="padding-left: 20px; margin-bottom: 20px;">
-          <li><strong>Family use:</strong> 2–3 people comfortably (one on lower bench, one on upper, standing room)</li>
-          <li><strong>Social sauna sessions:</strong> Friends can sit and stand without feeling cramped</li>
-          <li><strong>Long-term comfort:</strong> More circulation = better for heat distribution and user safety</li>
-          <li><strong>Standard commercial sizing:</strong> Aligns with typical home sauna dimensions (gives you reference design standards)</li>
-        </ul>
-
-        <div class="recommendation" style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; padding: 12px; border-radius: 6px; margin-bottom: 20px;">
-          <p style="margin: 0; font-size: 0.9em;"><strong>✓ Recommendation:</strong> **6×7 ft is the better choice** for most users. The +$700–$1,000 investment buys significantly more usable space, better heater performance (larger unit handles volume better), and room for 2–3 people safely. The extra 1 ft of width transforms the layout from "tight" to "comfortable."</p>
-        </div>
-
-        <h3>Heater Sizing by Sauna Volume</h3>
-        <table>
-          <tr>
-            <th>Sauna Size</th>
-            <th>Volume (ft³)</th>
-            <th>Recommended Heater</th>
-            <th>Min Wattage</th>
-            <th>Max Wattage</th>
-          </tr>
-          <tr>
-            <td>5 ft wide × 7 ft long × 7 ft high</td>
-            <td>245 ft³</td>
-            <td>5–6 kW</td>
-            <td>4.5 kW</td>
-            <td>6.5 kW</td>
-          </tr>
-          <tr>
-            <td>6 ft wide × 7 ft long × 7 ft high</td>
-            <td>294 ft³</td>
-            <td>6–7 kW</td>
-            <td>5.5 kW</td>
-            <td>7.5 kW</td>
-          </tr>
-          <tr style="background: rgba(32, 128, 128, 0.1); font-size: 0.9em;">
-            <td colspan="5"><strong>Rule of Thumb:</strong> 1 kW per 45–50 cubic feet (standard insulation). Use lower end for excellent insulation, higher end for minimal insulation.</td>
-          </tr>
-        </table>
-
-        <h3>Industry Benchmark: 6×7 ft is the Gold Standard</h3>
-        <p><strong>Professional sauna builders and manufacturers recommend 6×7 ft as the optimal size for residential home use.</strong> Here's why this specific size is considered the best value:</p>
-        <ul style="padding-left: 20px; margin-bottom: 0;">
-          <li>✓ Perfect fit under your 10×8 ft gazebo (proportional, not cramped)</li>
-          <li>✓ Accommodates 2–3 users comfortably (family or friends)</li>
-          <li>✓ Heater placement (front-right interior) allows full safety clearance (12–18")</li>
-          <li>✓ Floor space: 3.5 ft wide in front of heater (plenty of room to move)</li>
-          <li>✓ Proven heating performance: 6–7 kW heater handles 294 ft³ efficiently</li>
-          <li>✓ Not oversized: Energy costs reasonable (~0.5–1 kWh per session)</li>
-          <li>✓ Resale value: Industry-standard size is easier to sell/transfer</li>
-        </ul>
-
-      </div>
+      <button class="tab-btn active" onclick="switchTab('overview')">Overview</button>
+      <button class="tab-btn" onclick="switchTab('renderings')">3D & Plans</button>
+      <button class="tab-btn" onclick="switchTab('heater')">Heater Options (7-8 kW)</button>
+      <button class="tab-btn" onclick="switchTab('mistakes')">Design Best Practices</button>
+      <button class="tab-btn" onclick="switchTab('phases')">Build Phases</button>
+      <button class="tab-btn" onclick="switchTab('budget')">Complete Budget</button>
+      <button class="tab-btn" onclick="switchTab('cedar')">Cedar Breakdown</button>
     </div>
 
     <!-- OVERVIEW TAB -->
     <div id="overview" class="tab-content active">
       <div class="phase-card">
-        <h2>✓ Project Overview: 6×7×7 ft Sauna (RECOMMENDED)</h2>
-        <p>A complete wellness retreat build: a <strong>6 ft wide × 7 ft deep × 7 ft tall cedar sauna</strong> with <strong>6–7 kW electric heater</strong> (INSIDE with guard rail) and a <strong>Coldture Classic cold plunge</strong> system, all integrated under your existing <strong>10×8 ft gazebo</strong> with safe walking paths and proper drainage.</p>
+        <h2>Project Overview</h2>
+        <p style="margin-bottom: 20px; color: var(--text-dim);">A complete 7×6×7.5 ft Finnish sauna build optimized for authentic comfort. Interior volume 315 ft³ requires 6–7 kW heater. Cedar interior + composite exterior under gazebo integration.</p>
 
-        <h3>Layout (Top-Down View)</h3>
-        <p><strong>Sauna Interior (6×7×7 ft):</strong> Two-tier bench along back wall (full-length for lying down with head/foot space), door front-left, heater INSIDE front-right corner with protective cedar guard rail, small window on front wall. <strong>Floor space in front: 3.5 ft wide</strong>—plenty of room to move around the heater safely.</p>
-        <p><strong>Gazebo Layout:</strong> Sauna at rear, cold plunge (63×30") centered in front with 36" walking clearance, chiller (24×13×19") to the right, side paths on left and right.</p>
-        
-        <div class="hero-diagram">
-          <h4>Recommended Reference Images</h4>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-bottom: 20px;">
-            <div style="background: var(--card-bg); padding: 12px; border-radius: 6px; border: 1px solid var(--border); text-align: center;">
-              <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/489b224a-1bf8-4d22-aa22-0dfdbca6deea" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-bottom: 8px;" alt="Composite cladding options"/>
-              <p style="font-size: 0.85em; color: var(--text-dim); margin: 0;">Composite Cladding Options - Grey WPC finish reference</p>
-            </div>
-            <div style="background: var(--card-bg); padding: 12px; border-radius: 6px; border: 1px solid var(--border); text-align: center;">
-              <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/84ecd7f9-4e7e-41df-aa70-ceb88031d27a" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-bottom: 8px;" alt="Vapor barrier installation"/>
-              <p style="font-size: 0.85em; color: var(--text-dim); margin: 0;">Vapor Barrier - Foil-faced aluminum with seam tape</p>
-            </div>
-            <div style="background: var(--card-bg); padding: 12px; border-radius: 6px; border: 1px solid var(--border); text-align: center;">
-              <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/b97a9c73-1bea-498e-8119-baf5623d9355" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-bottom: 8px;" alt="Cedar interior installation"/>
-              <p style="font-size: 0.85em; color: var(--text-dim); margin: 0;">Cedar Interior - T&G boards with corner trim</p>
-            </div>
-            <div style="background: var(--card-bg); padding: 12px; border-radius: 6px; border: 1px solid var(--border); text-align: center;">
-              <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/b8edd786-6658-4ee5-bbab-c0f7f7f2e6b7" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-bottom: 8px;" alt="Heater and guard rail"/>
-              <p style="font-size: 0.85em; color: var(--text-dim); margin: 0;">Heater Guard Rail - Cedar protection around 6kW unit</p>
-            </div>
+        <h3>Interior Dimensions</h3>
+        <div class="dimension-grid">
+          <div class="dimension-card">
+            <div class="dimension-label">Width</div>
+            <div class="dimension-value">7 ft</div>
+            <p style="font-size: 0.85em; color: var(--text-dim); margin-top: 8px;">Full-length lying bench</p>
           </div>
-
-          <h4>Floor Plan (Top-Down View)</h4>
-          <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; border: 1px solid #1e293b; border-radius: 6px; background: #020617;">
-            <!-- Gazebo outer (10 × 8) -->
-            <rect x="50" y="50" width="700" height="500" fill="none" stroke="#208080" stroke-width="2" stroke-dasharray="5,5"/>
-            <text x="70" y="75" font-size="16" fill="#208080" font-weight="bold">GAZEBO 10' × 8'</text>
-            
-            <!-- Sauna (7 × 5) centered back -->
-            <rect x="150" y="80" width="500" height="300" fill="rgba(32, 128, 128, 0.15)" stroke="#208080" stroke-width="2"/>
-            <text x="400" y="110" text-anchor="middle" font-size="14" fill="#208080" font-weight="bold">SAUNA 7' × 5'</text>
-            
-            <!-- Back Wall with Benches -->
-            <rect x="150" y="80" width="500" height="25" fill="#8B4513" stroke="#DAA520" stroke-width="1"/>
-            <text x="400" y="100" text-anchor="middle" font-size="11" fill="#e5e7eb">BACK WALL - TWO-TIER BENCHES (Full-Length 7')</text>
-            
-            <!-- Door (front left) -->
-            <rect x="150" y="320" width="40" height="60" fill="#A0522D" stroke="#DAA520" stroke-width="2"/>
-            <text x="145" y="365" font-size="10" fill="#9ca3af">Door</text>
-            
-            <!-- Window (front right) -->
-            <rect x="610" y="320" width="40" height="50" fill="#87CEEB" stroke="#4682B4" stroke-width="2"/>
-            <text x="650" y="355" font-size="10" fill="#9ca3af">Window</text>
-            
-            <!-- Heater (front right interior, with guard) -->
-            <circle cx="620" cy="340" r="25" fill="#FF6347" stroke="#DC143C" stroke-width="2"/>
-            <text x="620" y="345" text-anchor="middle" font-size="10" fill="white" font-weight="bold">HEATER</text>
-            
-            <!-- Guard rail around heater -->
-            <rect x="595" y="315" width="50" height="50" fill="none" stroke="#DAA520" stroke-width="2" stroke-dasharray="3,3"/>
-            
-            <!-- Cold Plunge (centered in front) -->
-            <rect x="270" y="420" width="260" height="100" fill="rgba(100, 180, 200, 0.2)" stroke="#4682B4" stroke-width="2"/>
-            <text x="400" y="450" text-anchor="middle" font-size="12" fill="#87CEEB" font-weight="bold">COLD PLUNGE TUB</text>
-            <text x="400" y="465" text-anchor="middle" font-size="10" fill="#9ca3af">63" × 30"</text>
-            
-            <!-- Chiller (right side) -->
-            <rect x="620" y="440" width="70" height="60" fill="rgba(100, 180, 200, 0.15)" stroke="#4682B4" stroke-width="1" stroke-dasharray="2,2"/>
-            <text x="655" y="460" text-anchor="middle" font-size="9" fill="#9ca3af">Chiller</text>
-            
-            <!-- Walking paths and dimensions -->
-            <line x1="100" y1="580" x2="750" y2="580" stroke="#9ca3af" stroke-width="1"/>
-            <text x="425" y="600" text-anchor="middle" font-size="11" fill="#9ca3af">← 10 ft →</text>
-            
-            <line x1="30" y1="100" x2="30" y2="380" stroke="#9ca3af" stroke-width="1"/>
-            <text x="10" y="245" text-anchor="middle" font-size="11" fill="#9ca3af" transform="rotate(-90 10 245)">8 ft</text>
-            
-            <!-- Legend -->
-            <text x="70" y="510" font-size="10" fill="#9ca3af" font-weight="bold">Key Features:</text>
-            <text x="70" y="525" font-size="9" fill="#9ca3af">• Full-length benches (7 ft) for lying down</text>
-            <text x="70" y="538" font-size="9" fill="#9ca3af">• Heater inside front-right corner with guard rail</text>
-            <text x="70" y="551" font-size="9" fill="#9ca3af">• 36" walking lane in front</text>
-          </svg>
-        </div>
-
-        <div class="recommendation">
-          <strong>✓ Key Design Features:</strong> 
-          <ul style="margin: 8px 0 0 0; padding-left: 20px;">
-            <li>Heater INSIDE the sauna (front-right corner with protective guard rail) - not outside</li>
-            <li>Continuous foil vapor barrier prevents moisture damage and heat loss</li>
-            <li>Cedar T&G interior for aesthetics and durability</li>
-            <li>Grey composite cladding with 3/4" air gap (furring strips) prevents rot</li>
-            <li>Full-length benches (7 ft) allow users to lie down comfortably</li>
-            <li>Cold plunge positioned for easy 1–3 step transition from sauna</li>
-          </ul>
-        </div>
-
-        <h3>Visual References</h3>
-        <div style="background: rgba(32, 128, 128, 0.1); padding: 16px; border-radius: 8px; margin: 16px 0; border-left: 4px solid var(--primary);">
-          <p><strong>Reference Images Included Above:</strong></p>
-          <ul style="margin: 8px 0 0 0; padding-left: 20px; font-size: 0.95em;">
-            <li><strong>Composite Cladding:</strong> Shows the grey WPC exterior finish that will be used on all outer walls</li>
-            <li><strong>Vapor Barrier:</strong> Close-up of foil-faced aluminum with taped seams—critical for moisture control</li>
-            <li><strong>Cedar Interior:</strong> Shows the warm cedar T&G finish that will be visible inside</li>
-            <li><strong>Heater Guard Rail:</strong> Cedar protective enclosure around the 6kW heater—located INSIDE sauna, not outside</li>
-          </ul>
-        </div>
-
-        <h3>Quick Stats (6×7×7 ft Sauna)</h3>
-        <div class="cost-box">
-          <div class="cost-range">
-            <div class="cost-item">
-              <div class="cost-label">Sauna Build Budget</div>
-              <div class="cost-value">$5,550–$9,060</div>
-            </div>
-            <div class="cost-item">
-              <div class="cost-label">Timeline</div>
-              <div class="cost-value">5–10 weeks</div>
-            </div>
-            <div class="cost-item">
-              <div class="cost-label">Sauna Volume</div>
-              <div class="cost-value">294 ft³ (6×7×7)</div>
-            </div>
+          <div class="dimension-card">
+            <div class="dimension-label">Depth</div>
+            <div class="dimension-value">6 ft</div>
+            <p style="font-size: 0.85em; color: var(--text-dim); margin-top: 8px;">Efficient, compact</p>
           </div>
-          <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);">
-            <p style="margin: 0 0 8px 0; font-size: 0.9em; color: var(--text-dim);"><strong>Additional Costs (Not Included):</strong></p>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 0.9em;">
-              <div>
-                <p style="margin: 0 0 4px 0; color: var(--text);"><strong>Cold Plunge (Coldture Classic)</strong></p>
-                <p style="margin: 0; color: var(--text-dim);">$1,350–$1,700 CAD</p>
-              </div>
-              <div>
-                <p style="margin: 0 0 4px 0; color: var(--text);"><strong>10×8 ft Gazebo</strong></p>
-                <p style="margin: 0; color: var(--text-dim);">$3,500–$6,000+ (varies)</p>
-              </div>
-            </div>
+          <div class="dimension-card">
+            <div class="dimension-label">Height</div>
+            <div class="dimension-value">7.5 ft</div>
+            <p style="font-size: 0.85em; color: var(--text-dim); margin-top: 8px;">Proper ventilation</p>
+          </div>
+          <div class="dimension-card">
+            <div class="dimension-label">Volume</div>
+            <div class="dimension-value">315 ft³</div>
+            <p style="font-size: 0.85em; color: var(--text-dim); margin-top: 8px;">→ 6-7 kW heater</p>
           </div>
         </div>
 
-        <h3>Cold Plunge (Coldture Classic)</h3>
-        <p><strong>Tub Dimensions:</strong> 63" L × 29.5" W × 26" H | <strong>Chiller:</strong> 24.2" W × 13.1" D × 18.9" H | <strong>Water Capacity:</strong> ~500 liters | <strong>Temperature Control:</strong> 45–55°F ideal</p>
-        <p><strong>Placement:</strong> Centered in front of sauna, with chiller to the right, minimum 36" walking lane in front and back.</p>
+        <h3>Heater Sizing (315 ft³)</h3>
+        <div class="measurement-box">
+          <p><strong>Volume:</strong> 7 ft × 6 ft × 7.5 ft = 315 cubic feet</p>
+          <p style="margin-top: 8px;"><strong>Heater Rule:</strong> 1 kW per 45–50 cubic feet (excellent insulation)</p>
+          <p style="margin-top: 8px;"><strong>Recommended:</strong> 6–7 kW heater (Harvia or HUUM preferred)</p>
+        </div>
+
+        <h3>Bench Heights (Following Veeti's Rule #1: Feet Above Stones)</h3>
+        <div class="measurement-box">
+          <p><strong>Heater Stone Tops:</strong> 28–30 inches</p>
+        </div>
+        <div class="measurement-box">
+          <p><strong>Foot Bench:</strong> 28–30 inches (AT or above stone tops)</p>
+        </div>
+        <div class="measurement-box">
+          <p><strong>Sitting Bench:</strong> 43–48 inches (15–18 inches above foot bench)</p>
+        </div>
+        <div class="measurement-box">
+          <p><strong>Headroom Above Bench:</strong> 30–35 inches (to 7.5 ft ceiling) — slightly tight but acceptable with proper ventilation</p>
+        </div>
+
+        <h3>Interior Materials Summary</h3>
+        <table>
+          <tr><th>Material</th><th>Location</th><th>Specification</th></tr>
+          <tr><td>Cedar T&G</td><td>Ceiling + all walls</td><td>1×4 boards, natural finish</td></tr>
+          <tr><td>Cedar Benches</td><td>Back wall full length</td><td>2×4 slats, 5/8" gaps for drainage</td></tr>
+          <tr><td>Cedar Guard Rail</td><td>Around heater</td><td>3-sided enclosure, 1×2 slats, 3" spacing</td></tr>
+          <tr><td>Cedar Trim</td><td>Corners, base, door</td><td>1×1 and 1×2 pieces, stainless fasteners</td></tr>
+        </table>
+
+        <h3>Exterior Cladding</h3>
+        <p style="margin-bottom: 12px;"><strong>Composite Cladding:</strong> Grey WPC (wood-plastic composite), vertical orientation, no maintenance required, 20+ year lifespan</p>
+
+        <div class="rule-highlight">
+          <strong>✓ Interior Cedar Only</strong> — All wood finishing inside is premium cedar for authentic sauna aesthetic and durability. Exterior is composite for weather resistance and zero maintenance.
+        </div>
       </div>
     </div>
 
-    <!-- PHASE 1: STRUCTURE & FRAMING -->
-    <div id="phase1" class="tab-content">
+    <!-- RENDERINGS & FLOOR PLANS TAB -->
+    <div id="renderings" class="tab-content">
+      <div class="phase-card">
+        <h2>3D Rendering & Floor Plans</h2>
+        
+        <h3>3D Perspective - 7×6×7.5 ft Sauna under 10×8 ft Gazebo</h3>
+        <div class="image-container">
+          <img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/ef42c922-cfc6-4137-8741-011b8814c5f6.png" alt="3D Sauna Rendering">
+          <p class="image-caption">Modern sauna with grey composite exterior, full-width glass door, positioned under wooden gazebo with metal roof</p>
+        </div>
+
+        <h3>Top-Down Floor Plan</h3>
+        <div class="image-container">
+          <img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/9a007f9b-1919-40eb-80ba-d811827b63d1.png" alt="Floor Plan">
+          <p class="image-caption">Interior layout showing benches (7 ft length along back wall), heater with guard rail (front-right), door (front-left), and ventilation points</p>
+        </div>
+
+        <h3>Key Layout Features</h3>
+        <ul style="margin-left: 20px; margin-bottom: 20px;">
+          <li><strong>Door:</strong> Front-left, full-width glass (28" wide opening)</li>
+          <li><strong>Benches:</strong> Full 7 ft length along back wall, tiered (lower 18" deep, upper 24" deep)</li>
+          <li><strong>Heater:</strong> Front-right interior corner with 3-sided cedar guard rail</li>
+          <li><strong>Intake Vent:</strong> Front-right wall near heater, 3" duct at ~24" height</li>
+          <li><strong>Exhaust Vent:</strong> Back wall opposite intake, 3" duct at ~18" height, exits to outside</li>
+          <li><strong>Drying Vent:</strong> High on back wall (optional, for post-session humidity removal)</li>
+        </ul>
+
+        <h3>Gazebo Integration</h3>
+        <p style="margin-bottom: 12px;">Sauna dimensions: 7.5 ft wide × 6.5 ft deep (exterior with wall thickness)</p>
+        <p style="margin-bottom: 12px;">Gazebo dimensions: 10 ft × 8 ft</p>
+        <p style="margin-bottom: 12px;">Clearance: ~1.25 ft on each side, ~1 ft at front and back — adequate for walking paths and ventilation ducting</p>
+      </div>
+    </div>
+
+    <!-- HEATER OPTIONS TAB -->
+    <div id="heater" class="tab-content">
+      <div class="phase-card">
+        <h2>Heater Selection Guide (6-7 kW)</h2>
+        <p style="color: var(--text-dim); margin-bottom: 20px;">For a 315 ft³ sauna (7×6×7.5 ft), a 6–7 kW heater is optimal. We recommend HARVIA and HUUM as premium suppliers.</p>
+
+        <h3>Heater Type Comparison</h3>
+        <table>
+          <tr>
+            <th>Type</th>
+            <th>Pros</th>
+            <th>Cons</th>
+            <th>Best For</th>
+          </tr>
+          <tr>
+            <td><strong>Wall-Mounted</strong></td>
+            <td>Space-saving, easy installation, modern look</td>
+            <td>Less accessible for rock loading, some models pricier</td>
+            <td>Compact saunas, modern aesthetics</td>
+          </tr>
+          <tr>
+            <td><strong>Standing (Round)</strong></td>
+            <td>Traditional look, better rock accessibility, durable</td>
+            <td>Takes up floor space (guard rail extends reach), classic appearance</td>
+            <td>Traditional saunas, easier maintenance</td>
+          </tr>
+        </table>
+
+        <h3>Option 1: HARVIA Cilindro Wall Heater – 7 kW</h3>
+        <div class="heater-option">
+          <h4>HARVIA Cilindro PC70 (Wall-Mounted, 7 kW)</h4>
+          <p><strong>Price:</strong> $1,300–$1,600 CAD</p>
+          <p style="margin-top: 8px;"><strong>Type:</strong> Wall-mounted, cylindrical, modern design</p>
+          <p style="margin-top: 8px;"><strong>Key Features:</strong></p>
+          <ul style="margin-left: 20px; margin-top: 8px; font-size: 0.9em;">
+            <li>Excellent heating performance for 315 ft³</li>
+            <li>Elegant stainless steel finish</li>
+            <li>Includes Harvia Xafir digital controller (touchscreen)</li>
+            <li>Low energy consumption, highly efficient</li>
+            <li>Fits easily in corner, minimal floor space impact</li>
+          </ul>
+          <p style="margin-top: 12px; background: rgba(16, 185, 129, 0.15); padding: 8px; border-radius: 4px;">✓ Recommended for modern aesthetics & space efficiency</p>
+        </div>
+
+        <h3>Option 2: HARVIA Classic Standalone Heater – 6.5 kW</h3>
+        <div class="heater-option">
+          <h4>HARVIA M3 Standing Heater (Round, 6.5 kW)</h4>
+          <p><strong>Price:</strong> $1,150–$1,450 CAD</p>
+          <p style="margin-top: 8px;"><strong>Type:</strong> Standing/floor-mounted, round, traditional</p>
+          <p style="margin-top: 8px;"><strong>Key Features:</strong></p>
+          <ul style="margin-left: 20px; margin-top: 8px; font-size: 0.9em;">
+            <li>Classic Finnish design, timeless appeal</li>
+            <li>Rocks fully exposed on top for water throwing</li>
+            <li>Heavy-duty construction, very durable</li>
+            <li>Easy rock maintenance and loading</li>
+            <li>Works great with cedar guard rail enclosure</li>
+          </ul>
+          <p style="margin-top: 12px; background: rgba(16, 185, 129, 0.15); padding: 8px; border-radius: 4px;">✓ Recommended for traditional sauna lovers & authenticity</p>
+        </div>
+
+        <h3>Option 3: HUUM Hive Wall Heater – 7 kW</h3>
+        <div class="heater-option">
+          <h4>HUUM Hive (Wall-Mounted, 7 kW, Premium)</h4>
+          <p><strong>Price:</strong> $1,800–$2,200 CAD</p>
+          <p style="margin-top: 8px;"><strong>Type:</strong> Wall-mounted, hexagonal modules, ultra-modern</p>
+          <p style="margin-top: 8px;"><strong>Key Features:</strong></p>
+          <ul style="margin-left: 20px; margin-top: 8px; font-size: 0.9em;">
+            <li>Premium Finnish design (same company as NARVI saunas)</li>
+            <li>Smart app control via smartphone</li>
+            <li>Rapid heating (reaches target temp in 30–40 min)</li>
+            <li>Stainless steel + innovative cooling system</li>
+            <li>Longest warranty in industry (10 years)</li>
+          </ul>
+          <p style="margin-top: 12px; background: rgba(16, 185, 129, 0.15); padding: 8px; border-radius: 4px;">✓ Best for tech-forward, luxury sauna experience</p>
+        </div>
+
+        <h3>Option 4: HUUM Steel Standing Heater – 6 kW</h3>
+        <div class="heater-option">
+          <h4>HUUM Steel (Round Standing, 6 kW)</h4>
+          <p><strong>Price:</strong> $1,400–$1,800 CAD</p>
+          <p style="margin-top: 8px;"><strong>Type:</strong> Standing/floor, premium materials</p>
+          <p style="margin-top: 8px;"><strong>Key Features:</strong></p>
+          <ul style="margin-left: 20px; margin-top: 8px; font-size: 0.9em;">
+            <li>Heavy-duty stainless steel construction</li>
+            <li>Excellent heat retention</li>
+            <li>Smart controls (app option available)</li>
+            <li>Premium finish, professional appearance</li>
+            <li>Great for hybrid (traditional + tech) saunas</li>
+          </ul>
+          <p style="margin-top: 12px; background: rgba(16, 185, 129, 0.15); padding: 8px; border-radius: 4px;">✓ Recommended for premium hybrid setup</p>
+        </div>
+
+        <h3>Recommendation Summary</h3>
+        <div class="rule-highlight">
+          <p><strong>For this 315 ft³ sauna:</strong></p>
+          <ul style="margin-left: 20px; margin-top: 8px;">
+            <li><strong>Budget Option:</strong> HARVIA M3 Standing (6.5 kW) – $1,150–$1,450 – Traditional, proven, excellent value</li>
+            <li><strong>Best Balance:</strong> HARVIA Cilindro PC70 Wall (7 kW) – $1,300–$1,600 – Modern, efficient, smart controls</li>
+            <li><strong>Premium Choice:</strong> HUUM Hive Wall (7 kW) – $1,800–$2,200 – Luxury, smart app, fastest heating</li>
+          </ul>
+        </div>
+
+        <h3>Installation Notes</h3>
+        <p><strong>Wall-Mounted Heaters:</strong> Require electrical wiring (240V dedicated circuit, professional electrician recommended)</p>
+        <p><strong>Standing Heaters:</strong> Also require electrical, but installation is simpler (no wall penetrations needed for mounting, only for duct/vent)</p>
+        <p><strong>Guard Rail:</strong> 3-sided cedar enclosure required for all heaters to meet safety codes and prevent burns</p>
+      </div>
+    </div>
+
+    <!-- DESIGN BEST PRACTICES TAB -->
+    <div id="mistakes" class="tab-content">
+      <div class="phase-card">
+        <h2>4 Design Best Practices for Perfect Saunas</h2>
+        <p style="color: var(--text-dim); margin-bottom: 20px;">Professional sauna builders follow these principles to ensure comfort, safety, and authentic Finnish sauna experience. Here's how the Vaguine build implements each.</p>
+
+        <h3>Best Practice #1: Feet at or Above Heater Stones</h3>
+        <div class="rule-highlight">
+          <p><strong>Why it Matters:</strong> Proper bench height ensures even heat distribution from feet to head. When feet are too low, you experience temperature stratification (cold feet, hot head).</p>
+        </div>
+        <div class="measurement-box">
+          <p><strong>Vaguine Standard:</strong> Foot bench at 28–30 inches (AT heater stone tops)</p>
+          <p style="margin-top: 8px;"><strong>Sitting Bench:</strong> 43–48 inches (15–18 inches above foot bench)</p>
+          <p style="margin-top: 8px;">This positions your body in the optimal temperature zone for authentic sauna therapy.</p>
+        </div>
+
+        <h3>Best Practice #2: Dual Ventilation System</h3>
+        <div class="rule-highlight">
+          <p><strong>Why it Matters:</strong> Fresh air intake + humid air exhaust prevent CO₂ buildup and maintain oxygen levels. Without proper ventilation, users experience headaches and fatigue (often mistaken for heat sensitivity).</p>
+        </div>
+        <div class="measurement-box">
+          <p><strong>Vaguine Specification:</strong></p>
+          <p style="margin-top: 8px;">• Intake: 3" duct near heater at ~24" height (pulls fresh air near heat source)</p>
+          <p style="margin-top: 8px;">• Exhaust: 3" duct opposite wall at ~18" height (removes humid air)</p>
+          <p style="margin-top: 8px;">• Both ducts route to OUTSIDE (never to attic or enclosed spaces)</p>
+        </div>
+
+        <h3>Best Practice #3: Flat Ceiling Above Benches</h3>
+        <div class="rule-highlight">
+          <p><strong>Why it Matters:</strong> Heat naturally rises. A flat ceiling directly above where you sit ensures heated air is captured and reflected back down. Vaulted or peaked ceilings trap heat above your head, wasting energy and reducing comfort.</p>
+        </div>
+        <div class="measurement-box">
+          <p><strong>Vaguine Design:</strong> Flat ceiling at consistent 7.5 ft height across entire interior</p>
+          <p style="margin-top: 8px;">This creates proper heat reflection and circulation patterns for authentic sauna temperatures (180–200°F comfort zone).</p>
+        </div>
+
+        <h3>Best Practice #4: Optimal Headroom Above Benches</h3>
+        <div class="rule-highlight">
+          <p><strong>Why it Matters:</strong> Too much headroom spreads heat over a larger volume. Too little restricts head room. The "sweet spot" is 40–50 inches from bench to ceiling—close enough to trap heat, far enough for comfortable head clearance.</p>
+        </div>
+        <div class="measurement-box">
+          <p><strong>Vaguine Specification:</strong> 30–35 inches headroom (slightly compact, but efficient with 7.5 ft ceiling)</p>
+          <p style="margin-top: 8px;">✓ When combined with perfect bench heights + ventilation, this creates optimal sauna conditions</p>
+          <p style="margin-top: 8px;">Users averaging 5'8"–6' will have proper clearance and can sit upright comfortably</p>
+        </div>
+
+        <div class="rule-highlight" style="margin-top: 30px;">
+          <p><strong>✓ Vaguine Sauna Implements All 4 Best Practices:</strong></p>
+          <ul style="margin: 8px 0 0 0; padding-left: 20px;">
+            <li>Best Practice #1: Foot bench at stone tops (28–30") ✓</li>
+            <li>Best Practice #2: Dual intake + exhaust to outside ✓</li>
+            <li>Best Practice #3: Flat ceiling above benches ✓</li>
+            <li>Best Practice #4: Optimal compact headroom (30–35") ✓</li>
+            <li><strong>Result:</strong> Professional-grade Finnish sauna experience in residential setting</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- BUILD PHASES TAB -->
+    <div id="phases" class="tab-content">
       <div class="phase-card">
         <h2>Phase 1: Structure & Framing</h2>
         <div class="timeline">
-          <div class="timeline-item"><strong>Duration:</strong> 3–5 working days</div>
+          <div class="timeline-item"><strong>Duration:</strong> 3–5 days</div>
           <div class="timeline-item"><strong>Labor:</strong> 2–3 people</div>
-          <div class="timeline-item"><strong>Difficulty:</strong> Moderate</div>
-        </div>
-
-        <div class="recommendation">
-          <strong>✓ Recommendation:</strong> Build a solid, level floor first—this is your foundation. Spend extra time on squaring and leveling; it will save headaches in every phase after.
         </div>
 
         <h3>Overview</h3>
-        <p>Create a 7×5 ft pressure-treated platform with 2×6 lumber, build four walls at 16" on-center stud spacing, install ceiling joists for 7 ft interior height, and frame door/window openings.</p>
+        <p>Build a level 7.5' W × 6.5' D (exterior) platform, frame walls to 7.5 ft interior height, prepare ventilation rough-ins.</p>
 
-        <h3>Key Steps & Checklist</h3>
+        <h3>Key Steps</h3>
         <ul class="checklist">
-          <li>
-            <input type="checkbox" id="p1_1">
-            <label for="p1_1"><strong>Site Prep:</strong> Clear sauna footprint (6'×5'), compact gravel, level</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p1_2">
-            <label for="p1_2"><strong>Floor Frame:</strong> Build 2×6 PT perimeter, install joists 16" OC</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p1_3">
-            <label for="p1_3"><strong>Subfloor:</strong> Screw down 3/4" exterior plywood, verify level</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p1_4">
-            <label for="p1_4"><strong>Wall Assembly:</strong> Pre-build 4 walls on ground (2×4 studs 16" OC)</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p1_5">
-            <label for="p1_5"><strong>Door Opening:</strong> Frame 26"–28" wide rough opening on front-left</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p1_6">
-            <label for="p1_6"><strong>Window Opening:</strong> Frame 24"×24" rough opening on front wall</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p1_7">
-            <label for="p1_7"><strong>Raise Walls:</strong> Tilt up and brace walls to floor frame</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p1_8">
-            <label for="p1_8"><strong>Ceiling Joists:</strong> Install 2×6 joists (8 pcs for 6' span)</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p1_9">
-            <label for="p1_9"><strong>Verify Square:</strong> Diagonal measurements, plumb check, level all surfaces</label>
-          </li>
+          <li><input type="checkbox" id="p1_1"><label for="p1_1">Site prep & level gravel</label></li>
+          <li><input type="checkbox" id="p1_2"><label for="p1_2">Floor frame: 2×6 PT perimeter, joists 16" OC</label></li>
+          <li><input type="checkbox" id="p1_3"><label for="p1_3">Subfloor: 3/4" exterior plywood</label></li>
+          <li><input type="checkbox" id="p1_4"><label for="p1_4">Walls: 2×4 studs 16" OC, 7.5 ft interior height</label></li>
+          <li><input type="checkbox" id="p1_5"><label for="p1_5">Door rough opening: 28" wide, front-left</label></li>
+          <li><input type="checkbox" id="p1_6"><label for="p1_6">Ventilation rough-in: 3" ducts for intake (front-right) & exhaust (back)</label></li>
+          <li><input type="checkbox" id="p1_7"><label for="p1_7">Ceiling joists: 2×6, flat, level</label></li>
+          <li><input type="checkbox" id="p1_8"><label for="p1_8">Square & plumb check</label></li>
         </ul>
 
-        <h3>Materials & Costs</h3>
+        <h3>Materials</h3>
         <table>
-          <tr>
-            <th>Item</th>
-            <th>Qty</th>
-            <th>Unit</th>
-            <th>Low Cost</th>
-            <th>High Cost</th>
-          </tr>
-          <tr>
-            <td>Gravel base (Class 5)</td>
-            <td>1.5</td>
-            <td>yd³</td>
-            <td>$75</td>
-            <td>$120</td>
-          </tr>
-          <tr>
-            <td>2×6 pressure-treated lumber</td>
-            <td>240</td>
-            <td>linear ft</td>
-            <td>$145</td>
-            <td>$195</td>
-          </tr>
-          <tr>
-            <td>3/4" exterior plywood subfloor</td>
-            <td>2</td>
-            <td>sheets</td>
-            <td>$120</td>
-            <td>$180</td>
-          </tr>
-          <tr>
-            <td>2×4 studs (wall framing)</td>
-            <td>28</td>
-            <td>pcs</td>
-            <td>$150</td>
-            <td>$210</td>
-          </tr>
-          <tr>
-            <td>2×6 ceiling joists</td>
-            <td>8</td>
-            <td>pcs</td>
-            <td>$100</td>
-            <td>$150</td>
-          </tr>
-          <tr>
-            <td>Fasteners & hardware</td>
-            <td>1</td>
-            <td>lot</td>
-            <td>$60</td>
-            <td>$100</td>
-          </tr>
+          <tr><th>Item</th><th>Qty</th><th>Low</th><th>High</th></tr>
+          <tr><td>Gravel (Class 5)</td><td>2 yd³</td><td>$100</td><td>$160</td></tr>
+          <tr><td>2×6 pressure-treated</td><td>240 lin ft</td><td>$160</td><td>$220</td></tr>
+          <tr><td>3/4" plywood subfloor</td><td>3 sheets</td><td>$150</td><td>$225</td></tr>
+          <tr><td>2×4 studs</td><td>32 pcs</td><td>$160</td><td>$240</td></tr>
+          <tr><td>Fasteners & hardware</td><td>1 lot</td><td>$60</td><td>$100</td></tr>
         </table>
 
         <div class="cost-box">
-          <strong>Phase 1 Total:</strong>
-          <div class="cost-range">
-            <div class="cost-item">
-              <div class="cost-label">Low</div>
-              <div class="cost-value">$665</div>
-            </div>
-            <div class="cost-item">
-              <div class="cost-label">High</div>
-              <div class="cost-value">$975</div>
-            </div>
-          </div>
+          <strong>Phase 1 Total: $630 – $945</strong>
         </div>
       </div>
-    </div>
 
-    <!-- PHASE 2: INSULATION & VAPOR BARRIER -->
-    <div id="phase2" class="tab-content">
       <div class="phase-card">
         <h2>Phase 2: Insulation & Vapor Barrier</h2>
         <div class="timeline">
-          <div class="timeline-item"><strong>Duration:</strong> 2–3 working days</strong></div>
-          <div class="timeline-item"><strong>⚠️ MOST CRITICAL PHASE</strong></div>
-        </div>
-
-        <div class="critical">
-          <strong>⚠️ DO NOT SKIP OR RUSH:</strong> A continuous foil vapor barrier is what makes your sauna energy-efficient and prevents moisture damage. Poor barrier = 30–40% heat loss + interior rot in 3–5 years. Every seam MUST be taped with aluminum foil tape. This is non-negotiable.
-          <p style="margin-top: 12px; margin-bottom: 0; font-size: 0.95em;"><strong>Aluminum foil tape (not duct tape):</strong> Withstands 180–200°F with no degradation. Duct tape fails in sauna heat.</p>
+          <div class="timeline-item"><strong>Duration:</strong> 2–3 days</strong></div>
+          <div class="timeline-item"><strong>⚠️ MOST CRITICAL</strong></div>
         </div>
 
         <h3>Overview</h3>
-        <p>Install R-13 wall insulation and R-19 ceiling insulation, then cover all interior surfaces with FOIL-FACED vapor barrier (aluminum, never plastic), taping every seam and penetration. For a 7×5 ft space (~245 ft³), proper insulation is critical for heat retention.</p>
+        <p>Install R-13 walls, R-19 ceiling, then continuous FOIL vapor barrier with aluminum seam tape on EVERY seam.</p>
 
-        <h3>Key Steps & Checklist</h3>
-        <ul class="checklist">
-          <li>
-            <input type="checkbox" id="p2_1">
-            <label for="p2_1"><strong>Wall Insulation:</strong> Install R-13 fiberglass batts in all 2×4 cavities</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p2_2">
-            <label for="p2_2"><strong>Ceiling Insulation:</strong> Install R-19 batts in 2×6 joist cavities</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p2_3">
-            <label for="p2_3"><strong>Vapor Barrier Start:</strong> Unroll foil-faced barrier on back wall (floor to ceiling)</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p2_4">
-            <label for="p2_4"><strong>Seam Taping (Critical):</strong> Tape every horizontal + vertical seam with aluminum foil tape (2–3" lap)</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p2_5">
-            <label for="p2_5"><strong>Left & Right Walls:</strong> Install and tape barrier, careful around door/window openings</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p2_6">
-            <label for="p2_6"><strong>Front Wall:</strong> Install barrier around door/window rough openings</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p2_7">
-            <label for="p2_7"><strong>Penetration Sealing:</strong> Foam-seal any electrical, vent, or drain penetrations</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p2_8">
-            <label for="p2_8"><strong>Ceiling Barrier:</strong> Install foil vapor barrier on ceiling, tape all seams</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p2_9">
-            <label for="p2_9"><strong>Final Inspection:</strong> Walk through and verify NO gaps, tears, or unstapled areas</label>
-          </li>
-        </ul>
-
-        <div class="recommendation">
-          <strong>✓ Vapor Barrier Installation Tips:</strong>
-          <ul style="margin: 8px 0 0 0; padding-left: 20px;">
-            <li>Use a staple gun with 1/4" staples on 4" centers to hold barrier in place while taping</li>
-            <li>Aluminum foil tape ONLY (not duct tape)—it withstands sauna heat; duct tape fails in 6–12 months</li>
-            <li>Overlap seams by 2–3 inches; tape all overlaps on both sides for full sealing</li>
-            <li>Seal all penetrations (electrical boxes, vents, pipes) with foam sealant before taping</li>
-            <li>Test seals by running hand over every joint—you should feel no air movement</li>
-          </ul>
-        </div>
-
-        <h3>Materials & Costs</h3>
+        <h3>Materials</h3>
         <table>
-          <tr>
-            <th>Item</th>
-            <th>Qty</th>
-            <th>Unit</th>
-            <th>Low Cost</th>
-            <th>High Cost</th>
-          </tr>
-          <tr>
-            <td>R-13 fiberglass batts</td>
-            <td>10</td>
-            <td>rolls</td>
-            <td>$180</td>
-            <td>$250</td>
-          </tr>
-          <tr>
-            <td>R-19 fiberglass batts</td>
-            <td>8</td>
-            <td>pcs</td>
-            <td>$120</td>
-            <td>$180</td>
-          </tr>
-          <tr>
-            <td>Foil vapor barrier (400 sq ft)</td>
-            <td>400</td>
-            <td>sq ft</td>
-            <td>$80</td>
-            <td>$120</td>
-          </tr>
-          <tr>
-            <td>Aluminum foil tape (3 rolls)</td>
-            <td>3</td>
-            <td>rolls</td>
-            <td>$40</td>
-            <td>$60</td>
-          </tr>
-          <tr>
-            <td>Spray foam sealant</td>
-            <td>2</td>
-            <td>cans</td>
-            <td>$20</td>
-            <td>$35</td>
-          </tr>
+          <tr><th>Item</th><th>Qty</th><th>Low</th><th>High</th></tr>
+          <tr><td>R-13 fiberglass batts</td><td>12 rolls</td><td>$200</td><td>$290</td></tr>
+          <tr><td>R-19 fiberglass batts</td><td>10 pcs</td><td>$140</td><td>$210</td></tr>
+          <tr><td>Foil vapor barrier</td><td>400 sq ft</td><td>$90</td><td>$140</td></tr>
+          <tr><td>Aluminum foil tape (3 rolls)</td><td>3 rolls</td><td>$40</td><td>$60</td></tr>
+          <tr><td>Spray foam sealant</td><td>3 cans</td><td>$25</td><td>$40</td></tr>
         </table>
 
         <div class="cost-box">
-          <strong>Phase 2 Total:</strong>
-          <div class="cost-range">
-            <div class="cost-item">
-              <div class="cost-label">Low</div>
-              <div class="cost-value">$440</div>
-            </div>
-            <div class="cost-item">
-              <div class="cost-label">High</div>
-              <div class="cost-value">$645</div>
-            </div>
-          </div>
+          <strong>Phase 2 Total: $495 – $740</strong>
         </div>
       </div>
-    </div>
 
-    <!-- PHASE 3: CEDAR INTERIOR -->
-    <div id="phase3" class="tab-content">
       <div class="phase-card">
         <h2>Phase 3: Cedar Interior Finish</h2>
         <div class="timeline">
-          <div class="timeline-item"><strong>Duration:</strong> 4–6 working days</strong></div>
-          <div class="timeline-item"><strong>Skill Level:</strong> Moderate (T&G installation)</strong></div>
-        </div>
-
-        <div class="recommendation">
-          <strong>✓ Recommendation:</strong> Install ceiling first, then walls. This prevents difficult overhead work and ensures clean ceiling corners. Use a brad nailer for stainless steel fasteners—it's faster and cleaner than screwing.
+          <div class="timeline-item"><strong>Duration:</strong> 5–7 days</div>
         </div>
 
         <h3>Overview</h3>
-        <p>Line all interior walls and ceiling with 1×4 tongue-and-groove cedar boards, add trim around corners and floor base. Cedar is naturally rot-resistant and looks beautiful. With the larger 7×5 ft space, there's more wall area to cover but more room for users to move comfortably.</p>
+        <p>Line all interior with 1×4 T&G cedar (ceiling + walls), add trim. No exterior wood (only composite outside).</p>
 
-        <h3>Key Steps & Checklist</h3>
-        <ul class="checklist">
-          <li>
-            <input type="checkbox" id="p3_1">
-            <label for="p3_1"><strong>Ceiling Boards:</strong> Install 1×4 T&G cedar on ceiling, starting from one corner</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p3_2">
-            <label for="p3_2"><strong>Fastening:</strong> Use stainless steel fasteners, hidden nail/brad method</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p3_3">
-            <label for="p3_3"><strong>Back Wall:</strong> Install T&G boards bottom-to-top (no bench interference)</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p3_4">
-            <label for="p3_4"><strong>Left Wall (Door):</strong> Install boards around door rough opening, add 1×4 casing trim</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p3_5">
-            <label for="p3_5"><strong>Right Wall (Window):</strong> Install boards around window opening, add trim</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p3_6">
-            <label for="p3_6"><strong>Corner Trim:</strong> Install 1×1 cedar trim on all four interior corners</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p3_7">
-            <label for="p3_7"><strong>Base Trim:</strong> Install 1×2 cedar trim at floor perimeter</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p3_8">
-            <label for="p3_8"><strong>Vent/Duct Trim:</strong> Custom trim around any ventilation or utility penetrations</label>
-          </li>
+        <h3>Cedar Calculation</h3>
+        <p style="margin-bottom: 12px;"><strong>How Much Cedar Needed:</strong></p>
+        <ul style="margin-left: 20px; margin-bottom: 16px; font-size: 0.9em;">
+          <li><strong>Ceiling:</strong> 7 ft × 6 ft = 42 sq ft → ~52 lin ft of 1×4 boards</li>
+          <li><strong>Walls (interior):</strong> (2 × 7 ft + 2 × 6 ft) × 7.5 ft = 26 ft × 7.5 ft = 195 sq ft → ~240 lin ft of 1×4</li>
+          <li><strong>Benches (slats only):</strong> Lower bench 7 ft × 18" deep + upper bench 7 ft × 24" deep = ~32 lin ft of 2×4</li>
+          <li><strong>Trim (corners, base, casing):</strong> ~50 lin ft of 1×1 & 1×2</li>
+          <li><strong>Guard Rail around heater:</strong> ~30 lin ft of 1×2</li>
         </ul>
 
-        <h3>Materials & Costs</h3>
+        <div class="measurement-box">
+          <p><strong>TOTAL LINEAR FOOTAGE OF CEDAR:</strong></p>
+          <p style="margin-top: 8px;">52 (ceiling) + 240 (walls) + 32 (benches) + 50 (trim) + 30 (guard) = <strong>404 lin ft</strong></p>
+          <p style="margin-top: 12px;"><strong>8 ft Cedar Planks Needed:</strong> 404 ÷ 8 = <strong>~50.5 planks (round up to 51)</strong></p>
+          <p style="margin-top: 12px; background: rgba(16, 185, 129, 0.15); padding: 8px; border-radius: 4px;"><strong>Add 10% waste:</strong> 51 × 1.10 = <strong>56 eight-foot cedar planks</strong></p>
+        </div>
+
+        <h3>Materials</h3>
         <table>
-          <tr>
-            <th>Item</th>
-            <th>Qty</th>
-            <th>Unit</th>
-            <th>Low Cost</th>
-            <th>High Cost</th>
-          </tr>
-          <tr>
-            <td>1×4 T&G cedar boards (ceiling + walls)</td>
-            <td>500</td>
-            <td>linear ft</td>
-            <td>$1,350</td>
-            <td>$2,100</td>
-          </tr>
-          <tr>
-            <td>1×1 cedar corner trim</td>
-            <td>32</td>
-            <td>linear ft</td>
-            <td>$45</td>
-            <td>$70</td>
-          </tr>
-          <tr>
-            <td>1×2 cedar base trim</td>
-            <td>22</td>
-            <td>linear ft</td>
-            <td>$30</td>
-            <td>$45</td>
-          </tr>
-          <tr>
-            <td>1×4 cedar casing (door/window)</td>
-            <td>20</td>
-            <td>linear ft</td>
-            <td>$30</td>
-            <td>$45</td>
-          </tr>
-          <tr>
-            <td>Stainless fasteners & brad nails</td>
-            <td>1</td>
-            <td>lot</td>
-            <td>$30</td>
-            <td>$50</td>
-          </tr>
+          <tr><th>Item</th><th>Qty</th><th>Specification</th><th>Low</th><th>High</th></tr>
+          <tr><td>Cedar 1×4 T&G</td><td>56 planks</td><td>8 ft length, clear grade</td><td>$1,512</td><td>$2,240</td></tr>
+          <tr><td>Cedar 2×4 (benches)</td><td>6 pcs</td><td>8 ft length, clear</td><td>$120</td><td>$180</td></tr>
+          <tr><td>Cedar 1×1 trim</td><td>7 pcs</td><td>8 ft length</td><td>$70</td><td>$105</td></tr>
+          <tr><td>Cedar 1×2 trim</td><td>8 pcs</td><td>8 ft length</td><td>$80</td><td>$120</td></tr>
+          <tr><td>Stainless fasteners</td><td>1 lot</td><td>Brad nails + screws</td><td>$40</td><td>$70</td></tr>
         </table>
 
         <div class="cost-box">
-          <strong>Phase 3 Total:</strong>
-          <div class="cost-range">
-            <div class="cost-item">
-              <div class="cost-label">Low</div>
-              <div class="cost-value">$1,485</div>
-            </div>
-            <div class="cost-item">
-              <div class="cost-label">High</div>
-              <div class="cost-value">$2,295</div>
-            </div>
-          </div>
+          <strong>Phase 3 Total: $1,822 – $2,715</strong>
+        </div>
+      </div>
+
+      <div class="phase-card">
+        <h2>Phase 4: Benches & Heater Guard</h2>
+        <div class="timeline">
+          <div class="timeline-item"><strong>Duration:</strong> 3–4 days</div>
+        </div>
+
+        <h3>Bench Specifications</h3>
+        <p><strong>Foot Bench:</strong> 28–30" high, 18" deep, 7 ft length, 2×4 cedar slats 5/8" gaps</p>
+        <p><strong>Sitting Bench:</strong> 43–48" high, 24" deep, 7 ft length, 2×4 cedar slats 5/8" gaps</p>
+
+        <h3>Guard Rail</h3>
+        <p>3-sided cedar enclosure (front + left + right), 36–40" tall, 1×2 slats, 3" max spacing</p>
+
+        <h3>Materials</h3>
+        <table>
+          <tr><th>Item</th><th>Qty</th><th>Low</th><th>High</th></tr>
+          <tr><td>Cedar frame lumber (benches)</td><td>12 pcs 2×4</td><td>$90</td><td>$135</td></tr>
+          <tr><td>Stainless screws & bolts</td><td>1 lot</td><td>$25</td><td>$45</td></tr>
+          <tr><td>Sandpaper & finishing</td><td>1 lot</td><td>$15</td><td>$25</td></tr>
+          <tr><td>Thermometer & hygrometer</td><td>1 set</td><td>$20</td><td>$35</td></tr>
+        </table>
+
+        <div class="cost-box">
+          <strong>Phase 4 Total: $150 – $240</strong>
+        </div>
+      </div>
+
+      <div class="phase-card">
+        <h2>Phase 5: Heater Installation & Guard Rail</h2>
+        <div class="timeline">
+          <div class="timeline-item"><strong>Duration:</strong> 1–2 days (+ electrician)</div>
+        </div>
+
+        <h3>Heater Options (7-8 kW)</h3>
+        <p>See "Heater Options (7-8 kW)" tab for detailed pricing and comparisons.</p>
+        <ul style="margin-left: 20px;">
+          <li>HARVIA KIP80W Wall (8 kW): $1,200–$1,550</li>
+          <li>HARVIA Cilindro 8 Wall (8 kW): $1,400–$1,750</li>
+          <li>HUUM DROP 7.5 Wall (7.5 kW): $1,550–$1,950</li>
+          <li>HUUM HIVE Mini 9 Wall (9 kW): $2,300–$2,800</li>
+          <li>IKI Pillar 9 Standing (9 kW): $1,800–$2,400</li>
+          <li>Homecraft Revive 7.5 Standing (7.5 kW): $1,650–$2,100</li>
+        </ul>
+
+        <h3>Materials</h3>
+        <table>
+          <tr><th>Item</th><th>Low</th><th>High</th></tr>
+          <tr><td>Heater (7-8 kW, your choice)</td><td>$1,200</td><td>$2,800</td></tr>
+          <tr><td>Sauna rocks (50 lbs)</td><td>$25</td><td>$60</td></tr>
+          <tr><td>Guard rail (already in Phase 4)</td><td>$0</td><td>$0</td></tr>
+          <tr><td>Electrical wiring & breaker</td><td>$150</td><td>$300</td></tr>
+        </table>
+
+        <div class="cost-box">
+          <strong>Phase 5 Total: $1,325 – $2,560</strong>
+        </div>
+      </div>
+
+      <div class="phase-card">
+        <h2>Phase 6: Ventilation Installation</h2>
+        <div class="timeline">
+          <div class="timeline-item"><strong>Duration:</strong> 1 day</div>
+        </div>
+
+        <h3>Specifications</h3>
+        <p><strong>Intake:</strong> 3" duct, front-right near heater, ~24" above floor</p>
+        <p><strong>Exhaust:</strong> 3" duct, opposite wall, ~18" above floor, to outside</p>
+        <p><strong>Drying (optional):</strong> 2–3" opening high on wall</p>
+
+        <h3>Materials</h3>
+        <table>
+          <tr><th>Item</th><th>Qty</th><th>Low</th><th>High</th></tr>
+          <tr><td>Intake 3" duct (flexible)</td><td>20 lin ft</td><td>$45</td><td>$75</td></tr>
+          <tr><td>Exhaust 3" duct (flexible)</td><td>20 lin ft</td><td>$45</td><td>$75</td></tr>
+          <tr><td>Drying vent kit (optional)</td><td>1 kit</td><td>$35</td><td>$60</td></tr>
+          <tr><td>Foil tape & sealant</td><td>1 lot</td><td>$25</td><td>$40</td></tr>
+        </table>
+
+        <div class="cost-box">
+          <strong>Phase 6 Total: $150 – $250</strong>
+        </div>
+      </div>
+
+      <div class="phase-card">
+        <h2>Phase 7: Exterior Cladding & Finishing</h2>
+        <div class="timeline">
+          <div class="timeline-item"><strong>Duration:</strong> 5–7 days</div>
+        </div>
+
+        <h3>Strategy</h3>
+        <p>House wrap → 1×2 PT furring strips 16" OC (3/4" air gap) → grey WPC composite boards vertical → trim</p>
+
+        <h3>Materials</h3>
+        <table>
+          <tr><th>Item</th><th>Qty</th><th>Low</th><th>High</th></tr>
+          <tr><td>House wrap weather barrier</td><td>200 sq ft</td><td>$30</td><td>$55</td></tr>
+          <tr><td>1×2 PT furring strips</td><td>180 lin ft</td><td>$90</td><td>$170</td></tr>
+          <tr><td>WPC composite boards (grey, vertical)</td><td>180 lin ft</td><td>$540</td><td>$900</td></tr>
+          <tr><td>Composite trim & corners</td><td>50 lin ft</td><td>$100</td><td>$200</td></tr>
+          <tr><td>Fasteners & sealant</td><td>1 lot</td><td>$50</td><td>$100</td></tr>
+        </table>
+
+        <div class="cost-box">
+          <strong>Phase 7 Total: $810 – $1,425</strong>
         </div>
       </div>
     </div>
 
-    <!-- PHASE 4: BENCHES & DETAILS -->
-    <div id="phase4" class="tab-content">
+    <!-- COMPLETE BUDGET TAB -->
+    <div id="budget" class="tab-content">
       <div class="phase-card">
-        <h2>Phase 4: Benches & Interior Details</h2>
-        <div class="timeline">
-          <div class="timeline-item"><strong>Duration:</strong> 2–3 working days</strong></div>
-          <div class="timeline-item"><strong>Skill Level:</strong> Beginner to Moderate</strong></div>
-        </div>
+        <h2>Complete Project Budget</h2>
 
-        <div class="recommendation">
-          <strong>✓ Recommendation:</strong> Two-tier bench along the full 7 ft back wall only (no side benches). Full-length benches allow users to lie down comfortably with head and foot space. Lower bench: 16"–18" high × 18" deep. Upper bench: 36" high × 24" deep. This maximizes usable floor space for standing and moving.
-        </div>
-
-        <h3>Bench Layout</h3>
-        <p><strong>Lower Bench:</strong> 18" high, 18" deep, 7 ft long | <strong>Upper Bench:</strong> 36" high, 24" deep, 7 ft long | <strong>Spacing:</strong> ~18"–20" vertical gap between benches | <strong>Full-Length Design:</strong> Allows users to lie down flat with ~12 inches of head space and ~12 inches of foot space on each bench</p>
-        <p><strong>Slats:</strong> 2×4 clear cedar with 5/8" gaps for drainage</p>
-
-        <h3>Key Steps & Checklist</h3>
-        <ul class="checklist">
-          <li>
-            <input type="checkbox" id="p4_1">
-            <label for="p4_1"><strong>Lower Frame:</strong> Build support legs and cross-bracing for lower bench</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p4_2">
-            <label for="p4_2"><strong>Lower Slats:</strong> Install 2×4 cedar slats with 5/8" gaps, stainless fasteners</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p4_3">
-            <label for="p4_3"><strong>Upper Frame:</strong> Build support legs/brackets, offset above lower bench</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p4_4">
-            <label for="p4_4"><strong>Upper Slats:</strong> Install 2×4 cedar slats with 5/8" gaps</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p4_5">
-            <label for="p4_5"><strong>Sanding:</strong> Sand all surfaces smooth (120–150 grit)</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p4_6">
-            <label for="p4_6"><strong>Finish (Optional):</strong> Apply paraffin oil or food-grade mineral oil for durability</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p4_7">
-            <label for="p4_7"><strong>Thermometer:</strong> Mount interior thermometer on back wall at eye level</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p4_8">
-            <label for="p4_8"><strong>Hygrometer:</strong> Mount hygrometer (measures humidity) near thermometer</label>
-          </li>
-        </ul>
-
-        <h3>Materials & Costs</h3>
+        <h3>Full Cost Breakdown</h3>
         <table>
-          <tr>
-            <th>Item</th>
-            <th>Qty</th>
-            <th>Unit</th>
-            <th>Low Cost</th>
-            <th>High Cost</th>
-          </tr>
-          <tr>
-            <td>2×4 clear cedar slats (benches)</td>
-            <td>14</td>
-            <td>pcs (8')</td>
-            <td>$200</td>
-            <td>$310</td>
-          </tr>
-          <tr>
-            <td>2×4 bench frame lumber</td>
-            <td>12</td>
-            <td>pcs</td>
-            <td>$75</td>
-            <td>$115</td>
-          </tr>
-          <tr>
-            <td>Stainless fasteners (screws)</td>
-            <td>1</td>
-            <td>box</td>
-            <td>$20</td>
-            <td>$35</td>
-          </tr>
-          <tr>
-            <td>Sandpaper & supplies</td>
-            <td>1</td>
-            <td>lot</td>
-            <td>$15</td>
-            <td>$25</td>
-          </tr>
-          <tr>
-            <td>Paraffin oil (optional)</td>
-            <td>2</td>
-            <td>qt</td>
-            <td>$12</td>
-            <td>$20</td>
-          </tr>
-          <tr>
-            <td>Thermometer + Hygrometer</td>
-            <td>1</td>
-            <td>set</td>
-            <td>$20</td>
-            <td>$35</td>
+          <tr><th>Phase</th><th>Low Cost</th><th>High Cost</th></tr>
+          <tr><td>Phase 1: Structure & Framing</td><td>$630</td><td>$945</td></tr>
+          <tr><td>Phase 2: Insulation & Vapor Barrier</td><td>$495</td><td>$740</td></tr>
+          <tr><td>Phase 3: Cedar Interior</td><td>$1,822</td><td>$2,715</td></tr>
+          <tr><td>Phase 4: Benches & Details</td><td>$150</td><td>$240</td></tr>
+          <tr><td>Phase 5: Heater Installation</td><td>$1,325</td><td>$2,560</td></tr>
+          <tr><td>Phase 6: Ventilation</td><td>$150</td><td>$250</td></tr>
+          <tr><td>Phase 7: Exterior & Finishing</td><td>$810</td><td>$1,425</td></tr>
+          <tr style="background: rgba(32, 128, 128, 0.2); font-weight: bold;">
+            <td><strong>TOTAL SAUNA BUILD (7×6×7.5 ft)</strong></td>
+            <td><strong>$5,382</strong></td>
+            <td><strong>$8,875</strong></td>
           </tr>
         </table>
 
-        <div class="cost-box">
-          <strong>Phase 4 Total:</strong>
-          <div class="cost-range">
-            <div class="cost-item">
-              <div class="cost-label">Low</div>
-              <div class="cost-value">$350</div>
-            </div>
-            <div class="cost-item">
-              <div class="cost-label">High</div>
-              <div class="cost-value">$540</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- PHASE 5: HEATER & GUARD RAIL -->
-    <div id="phase5" class="tab-content">
-      <div class="phase-card">
-        <h2>Phase 5: Heater & Safety Guard Rail</h2>
-        <div class="timeline">
-          <div class="timeline-item"><strong>Duration:</strong> 1 working day</strong></div>
-          <div class="timeline-item"><strong>⚠️ SAFETY CRITICAL</strong></div>
-        </div>
-
-        <div class="critical">
-          <strong>⚠️ HEATER LOCATION (CRITICAL):</strong> The 6 kW heater is positioned INSIDE the sauna, in the front-right interior corner (NOT outside). It reaches 400°F and MUST be protected with a cedar guard rail (3-sided). This is a legal/safety requirement and makes the heater accessible for loading rocks and monitoring temperature.
-          <p style="margin-top: 12px; margin-bottom: 0; font-size: 0.95em;"><strong>Guard Rail Spec:</strong> 3-sided cedar enclosure (front, left, right), 36–40" tall, vertical 1×2 slats with 3" max spacing. Allows airflow around heater while preventing accidental contact.</p>
-        </div>
-
-        <h3>Heater Placement & Guard Rail</h3>
-        <p><strong>Position:</strong> Front-right interior corner (visible through glass door for user monitoring)</p>
-        <p><strong>Guard Rail:</strong> 3-sided cedar enclosure (front + left + right), 36–40" tall, vertical 1×2 slats with max 3" spacing</p>
-        <p><strong>Clearance:</strong> 4" minimum on all sides of heater for airflow and safety</p>
-
-        <h3>Key Steps & Checklist</h3>
-        <ul class="checklist">
-          <li>
-            <input type="checkbox" id="p5_1">
-            <label for="p5_1"><strong>Heater Placement:</strong> Position 6 kW heater on floor in front-right corner</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p5_2">
-            <label for="p5_2"><strong>Guard Rail Frame:</strong> Build 3-sided cedar frame (front, left, right)</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p5_3">
-            <label for="p5_3"><strong>Vertical Slats:</strong> Install 1×2 cedar slats with 3" max spacing</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p5_4">
-            <label for="p5_4"><strong>Clearance Check:</strong> Verify 4" minimum clearance on all heater sides</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p5_5">
-            <label for="p5_5"><strong>Sauna Rocks:</strong> Load rocks (~35–50 lbs) on heater top</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p5_6">
-            <label for="p5_6"><strong>Heater Electrical:</strong> Final wiring/connections (if electrician hasn't completed)</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p5_7">
-            <label for="p5_7"><strong>Controls Test:</strong> Power on and test heater control panel</label>
-          </li>
-        </ul>
-
-        <h3>Heater Sizing Calculator (For 6×7×7 ft: Use 6–7 kW)</h3>
-        <div style="background: rgba(32, 128, 128, 0.1); padding: 16px; border-radius: 8px; margin: 16px 0; border-left: 4px solid #10b981;">
-          <p style="margin-bottom: 12px;"><strong>✓ For 6×7×7 ft sauna:</strong> <span style="color: #10b981; font-weight: bold;">6–7 kW is the recommended range.</span> Enter dimensions below to calculate for other sizes.</p>
-          
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
-            <div>
-              <label style="display: block; font-size: 0.9em; color: #9ca3af; margin-bottom: 4px;">Width (ft):</label>
-              <input type="number" id="saunaWidth" value="6" style="width: 100%; padding: 8px; background: #020617; border: 1px solid #1e293b; border-radius: 4px; color: #e5e7eb;" />
-            </div>
-            <div>
-              <label style="display: block; font-size: 0.9em; color: #9ca3af; margin-bottom: 4px;">Depth (ft):</label>
-              <input type="number" id="saunaDepth" value="7" style="width: 100%; padding: 8px; background: #020617; border: 1px solid #1e293b; border-radius: 4px; color: #e5e7eb;" />
-            </div>
-            <div>
-              <label style="display: block; font-size: 0.9em; color: #9ca3af; margin-bottom: 4px;">Height (ft):</label>
-              <input type="number" id="saunaHeight" value="7" style="width: 100%; padding: 8px; background: #020617; border: 1px solid #1e293b; border-radius: 4px; color: #e5e7eb;" />
-            </div>
-            <div>
-              <label style="display: block; font-size: 0.9em; color: #9ca3af; margin-bottom: 4px;">Insulation Level:</label>
-              <select id="insulationLevel" style="width: 100%; padding: 8px; background: #020617; border: 1px solid #1e293b; border-radius: 4px; color: #e5e7eb;">
-                <option value="standard">Standard (R13/R19)</option>
-                <option value="good">Good (R15/R21)</option>
-                <option value="excellent">Excellent (R20+)</option>
-              </select>
-            </div>
-          </div>
-          
-          <button onclick="calculateHeaterSize()" style="background: #208080; color: white; padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; margin-bottom: 12px;">Calculate Heater Size</button>
-          
-          <div id="heaterResult" style="display: none; background: rgba(16, 185, 129, 0.15); padding: 12px; border-radius: 6px; border-left: 4px solid #10b981; margin-bottom: 12px;">
-            <p style="margin: 0;"><strong id="resultText"></strong></p>
-          </div>
-        </div>
-
-        <div class="recommendation">
-          <strong>✓ General Guidelines:</strong> For a 7×5×7 ft sauna (~245 ft³) with standard insulation, a 6–9 kW heater is recommended. Budget brands ($800–$1,100) are reliable; mid-range ($1,200–$1,500) offer better controls. For DIY, oversizing wastes electricity—stick to the calculator recommendation.
-        </div>
-
-        <h3>Heater Options (6 kW)</h3>
-        <table>
-          <tr>
-            <th>Brand</th>
-            <th>Model</th>
-            <th>Price Range</th>
-            <th>Notes</th>
-          </tr>
-          <tr>
-            <td>Amerec</td>
-            <td>A-Series</td>
-            <td>$800–$1,100</td>
-            <td>Budget, reliable, simple controls</td>
-          </tr>
-          <tr>
-            <td>Harvia</td>
-            <td>KIP60</td>
-            <td>$1,100–$1,400</td>
-            <td>Mid-range, good digital controller</td>
-          </tr>
-          <tr>
-            <td>Finnleo</td>
-            <td>Sports Plus</td>
-            <td>$1,200–$1,500</td>
-            <td>Premium features, durable</td>
-          </tr>
-          <tr>
-            <td>HUUM</td>
-            <td>Steel</td>
-            <td>$1,400–$1,800</td>
-            <td>High-end, luxury finish</td>
-          </tr>
-        </table>
-
-        <h3>Materials & Costs</h3>
-        <table>
-          <tr>
-            <th>Item</th>
-            <th>Qty</th>
-            <th>Unit</th>
-            <th>Low Cost</th>
-            <th>High Cost</th>
-          </tr>
-          <tr>
-            <td>6 kW sauna heater</td>
-            <td>1</td>
-            <td>unit</td>
-            <td>$800</td>
-            <td>$1,500</td>
-          </tr>
-          <tr>
-            <td>Sauna rocks</td>
-            <td>1</td>
-            <td>bucket (40 lbs)</td>
-            <td>$25</td>
-            <td>$50</td>
-          </tr>
-          <tr>
-            <td>Cedar guard rail kit (pre-fab or materials)</td>
-            <td>1</td>
-            <td>kit</td>
-            <td>$75</td>
-            <td>$150</td>
-          </tr>
-          <tr>
-            <td>Stainless fasteners & hardware</td>
-            <td>1</td>
-            <td>lot</td>
-            <td>$20</td>
-            <td>$35</td>
-          </tr>
-        </table>
-
-        <div class="cost-box">
-          <strong>Phase 5 Total:</strong>
-          <div class="cost-range">
-            <div class="cost-item">
-              <div class="cost-label">Low</div>
-              <div class="cost-value">$920</div>
-            </div>
-            <div class="cost-item">
-              <div class="cost-label">High</div>
-              <div class="cost-value">$1,735</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- PHASE 6: EXTERIOR & FINISHING -->
-    <div id="phase6" class="tab-content">
-      <div class="phase-card">
-        <h2>Phase 6: Exterior Cladding & Finishing</h2>
-        <div class="timeline">
-          <div class="timeline-item"><strong>Duration:</strong> 5–7 working days</strong></div>
-          <div class="timeline-item"><strong>⚠️ Requires dry weather</strong></div>
-        </div>
-
-        <div class="critical">
-          <strong>⚠️ FURRING STRIPS ARE CRITICAL:</strong> The 3/4-inch air gap behind composite panels prevents moisture trap and rot. Without furring strips, water will eventually damage interior structure (cost: $10,000+ repair). Install 1×2 pressure-treated strips vertically on 16" centers over house wrap, then attach WPC boards to furring strips. This is non-negotiable.
-          <p style="margin-top: 12px; margin-bottom: 0; font-size: 0.95em;"><strong>Air Gap Function:</strong> Allows water that penetrates the outer boards to drain down and out via small weep holes at bottom trim. Interior structure stays dry.</p>
-        </div>
-
-        <h3>Exterior Strategy</h3>
-        <ol>
-          <li><strong>House Wrap:</strong> Weather barrier, prevents water penetration</li>
-          <li><strong>Furring Strips:</strong> 1×2 lumber creates 3/4" ventilation gap</li>
-          <li><strong>Composite Cladding:</strong> Grey WPC boards, installed vertically</li>
-          <li><strong>Trim & Finishing:</strong> Corner pieces, door/window casing, top trim</li>
-        </ol>
-
-        <h3>Key Steps & Checklist</h3>
-        <ul class="checklist">
-          <li>
-            <input type="checkbox" id="p6_1">
-            <label for="p6_1"><strong>House Wrap:</strong> Install weather barrier on all exterior walls</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p6_2">
-            <label for="p6_2"><strong>Wrap Seams:</strong> Tape all seams with house wrap tape</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p6_3">
-            <label for="p6_3"><strong>Furring Strips:</strong> Install 1×2 pressure-treated strips vertically (16" OC)</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p6_4">
-            <label for="p6_4"><strong>Spacing Verification:</strong> Ensure 3/4" consistent gap behind all furring</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p6_5">
-            <label for="p6_5"><strong>Composite Boards:</strong> Install WPC vertical boards, start at bottom</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p6_6">
-            <label for="p6_6"><strong>Corner Trim:</strong> Install composite corner pieces (outside corners)</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p6_7">
-            <label for="p6_7"><strong>Top Trim:</strong> Install trim cap around roof perimeter</label>
-          </tr>
-          <li>
-            <input type="checkbox" id="p6_8">
-            <label for="p6_8"><strong>Door Casing:</strong> Install matching composite trim around door</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p6_9">
-            <label for="p6_9"><strong>Window Casing:</strong> Install trim around window</label>
-          </li>
-          <li>
-            <input type="checkbox" id="p6_10">
-            <label for="p6_10"><strong>Final Inspection:</strong> Verify plumb, secure, clean finish</label>
-          </li>
-        </ul>
-
-        <div class="recommendation">
-          <strong>✓ Composite Cladding Advantages:</strong>
-          <ul style="margin: 8px 0 0 0; padding-left: 20px;">
-            <li>No finishing required—no stain, paint, or annual maintenance</li>
-            <li>Fade-resistant to UV and weathering (20+ year lifespan)</li>
-            <li>Clean aesthetic—grey WPC (wood-plastic composite) complements gazebo timber perfectly</li>
-            <li>Installed vertically (not horizontal) sheds water more effectively</li>
-            <li>Lightweight compared to wood, easier for DIY installation</li>
-          </ul>
-          <p style="margin-top: 12px; margin-bottom: 0; font-size: 0.9em; color: var(--text-dim);"><strong>Alternative:</strong> Reclaimed wood or cedar exterior (higher maintenance, natural appearance). Composite is recommended for low-touch long-term durability.</p>
-        </div>
-
-        <h3>Materials & Costs</h3>
-        <table>
-          <tr>
-            <th>Item</th>
-            <th>Qty</th>
-            <th>Unit</th>
-            <th>Low Cost</th>
-            <th>High Cost</th>
-          </tr>
-          <tr>
-            <td>House wrap weather barrier</td>
-            <td>200</td>
-            <td>sq ft</td>
-            <td>$30</td>
-            <td>$50</td>
-          </tr>
-          <tr>
-            <td>House wrap tape</td>
-            <td>1</td>
-            <td>roll</td>
-            <td>$10</td>
-            <td>$20</td>
-          </tr>
-          <tr>
-            <td>1×2 furring strips (PT)</td>
-            <td>170</td>
-            <td>linear ft</td>
-            <td>$80</td>
-            <td>$150</td>
-          </tr>
-          <tr>
-            <td>WPC composite boards (grey, vertical)</td>
-            <td>170</td>
-            <td>linear ft</td>
-            <td>$510</td>
-            <td>$850</td>
-          </tr>
-          <tr>
-            <td>Composite trim & corners</td>
-            <td>45</td>
-            <td>linear ft</td>
-            <td>$90</td>
-            <td>$180</td>
-          </tr>
-          <tr>
-            <td>Exterior fasteners & sealant</td>
-            <td>1</td>
-            <td>lot</td>
-            <td>$50</td>
-            <td>$100</td>
-          </tr>
-        </table>
-
-        <div class="cost-box">
-          <strong>Phase 6 Total:</strong>
-          <div class="cost-range">
-            <div class="cost-item">
-              <div class="cost-label">Low</div>
-              <div class="cost-value">$790</div>
-            </div>
-            <div class="cost-item">
-              <div class="cost-label">High</div>
-              <div class="cost-value">$1,370</div>
-            </div>
-          </div>
-        </div>
-
-        <h3>✓ Project Grand Total (6×7×7 ft Sauna - RECOMMENDED)</h3>
-        <table>
-          <tr>
-            <th>Phase</th>
-            <th>Low Cost</th>
-            <th>High Cost</th>
-          </tr>
-          <tr>
-            <td>Phase 1: Structure (6×7 platform)</td>
-            <td>$750</td>
-            <td>$1,100</td>
-          </tr>
-          <tr>
-            <td>Phase 2: Insulation & Vapor (R13/R19)</td>
-            <td>$450</td>
-            <td>$680</td>
-          </tr>
-          <tr>
-            <td>Phase 3: Cedar Interior (+50 ft more boards)</td>
-            <td>$1,650</td>
-            <td>$2,450</td>
-          </tr>
-          <tr>
-            <td>Phase 4: Full-Length Benches (6 ft + 6 ft)</td>
-            <td>$400</td>
-            <td>$620</td>
-          </tr>
-          <tr>
-            <td>Phase 5: 6–7 kW Heater & Guard Rail (INSIDE)</td>
-            <td>$1,050</td>
-            <td>$2,000</td>
-          </tr>
-          <tr>
-            <td>Phase 6: Exterior Composite Cladding</td>
-            <td>$850</td>
-            <td>$1,500</td>
-          </tr>
-          <tr style="background: rgba(16, 185, 129, 0.2); font-weight: bold;">
-            <td>✓ SAUNA BUILD TOTAL (6×7×7 ft RECOMMENDED)</td>
-            <td style="color: #10b981;">$5,150</td>
-            <td style="color: #10b981;">$8,350</td>
-          </tr>
-        </table>
-
-        <div class="cost-box">
-          <strong>Cold Plunge Bundle (Separate):</strong> Coldture Classic tub + Chiller (~$1,350–$1,700 CAD, varies by retailer)
-          <p style="margin-top: 12px; font-size: 0.9em; color: var(--text-dim);"><strong>Total Project Cost:</strong> Sauna ($5,150–$8,350) + Cold Plunge ($1,350–$1,700) = <strong>$6,500–$10,050 CAD</strong> (excluding gazebo)</p>
-        </div>
-
-        <div class="recommendation">
-          <strong>✓ Why 6×7×7 ft is Your Best Choice:</strong>
-          <ul style="margin: 8px 0 0 0; padding-left: 20px;">
-            <li><strong>Industry standard:</strong> Professional saunas use this size—proven design, proven costs</li>
-            <li><strong>Perfect fit:</strong> Proportional inside your 10×8 ft gazebo (not cramped)</li>
-            <li><strong>User capacity:</strong> 2–3 people comfortably (family-friendly, not solo-only)</li>
-            <li><strong>Safety & comfort:</strong> 12–18" clearance around heater (vs 4–6" in 5×7)</li>
-            <li><strong>Better value:</strong> Only +$500–$800 more than 5×7, but dramatically better usability</li>
-            <li><strong>Heater performance:</strong> 6–7 kW handles 294 ft³ efficiently without oversizing</li>
-            <li><strong>Resale:</strong> Standard size is easier to sell if you ever move</li>
+        <h3>What's Included</h3>
+        <div class="rule-highlight">
+          <ul style="margin: 0; padding-left: 20px;">
+            <li>✓ Complete interior cedar finish (ceiling, walls, benches, trim)</li>
+            <li>✓ Heater selection & installation (6-7 kW)</li>
+            <li>✓ Proper ventilation (dual intake/exhaust)</li>
+            <li>✓ Composite exterior cladding (no maintenance)</li>
+            <li>✓ Insulation & vapor barrier (continuous foil)</li>
+            <li>✓ Full bench system (lower + upper)</li>
           </ul>
         </div>
+
+        <h3>What's NOT Included</h3>
+        <ul style="margin-left: 20px;">
+          <li>Gazebo structure ($3,500–$6,000+ separate)</li>
+          <li>Cold plunge tub (Coldture Classic ~$1,350–$1,700 separate)</li>
+          <li>Professional electrician labor (estimate $300–$600 for heater wiring)</li>
+          <li>Land prep/leveling beyond gravel base</li>
+        </ul>
+
+        <h3>Cost Drivers</h3>
+        <p style="margin-bottom: 12px;"><strong>Biggest Expense: Cedar Interior (Phase 3)</strong> — ~34% of total budget (~$1,822–$2,715)</p>
+        <p style="margin-bottom: 12px;"><strong>Second: Heater (Phase 5)</strong> — ~25–35% of budget (~$1,200–$2,800 depending on model choice)</p>
+        <p style="margin-bottom: 12px;">You can optimize by:</p>
+        <ul style="margin-left: 20px;">
+          <li>Choosing HARVIA M3 standing (budget option) vs HUUM Hive (premium)</li>
+          <li>Using mid-grade cedar vs premium clear grade</li>
+          <li>DIY some phases vs hiring contractors</li>
+        </ul>
+
+        <h3>Budget Optimization Tips</h3>
+        <p style="margin-bottom: 12px;"><strong>Save on Heater:</strong> Choose HARVIA KIP80W ($1,200–$1,550) vs premium HUUM models ($2,300–$2,800) = $1,000–$1,250 savings</p>
+        <p style="margin-bottom: 12px;"><strong>DIY vs Professional:</strong> Completing phases 1–4 yourself vs hiring saves ~$2,000–$3,500 in labor</p>
+        <p style="margin-bottom: 12px;"><strong>Cedar Grade:</strong> Using standard grade vs premium clear grade saves ~$400–$600</p>
+
+        <h3>Timeline</h3>
+        <p><strong>Estimated Total Build Time:</strong> 5–8 weeks (part-time DIY with professional electrician for heater only)</p>
+        <p><strong>Critical Path:</strong> Phases 1, 2, 3 (structure & cedar) take longest. Heater & ventilation are quick (1–2 days each)</p>
+        <p><strong>Parallel Work:</strong> Exterior cladding (Phase 7) can start once walls are framed, doesn't need to wait for interior cedar</p>
+      </div>
+    </div>
+
+    <!-- CEDAR BREAKDOWN TAB -->
+    <div id="cedar" class="tab-content">
+      <div class="phase-card">
+        <h2>Cedar Material Breakdown & Math</h2>
+
+        <h3>Total Cedar Calculation</h3>
+        <div class="measurement-box">
+          <p><strong>Interior Dimensions:</strong> 7 ft wide × 6 ft deep × 7.5 ft tall</p>
+          <p style="margin-top: 8px;"><strong>Material Grade:</strong> Clear cedar, 1×4 T&G for ceiling/walls, 2×4 for benches & frame, 1×1 & 1×2 for trim</p>
+        </div>
+
+        <h3>Detailed Breakdown</h3>
+        <table>
+          <tr>
+            <th>Component</th>
+            <th>Dimensions</th>
+            <th>Calculation</th>
+            <th>Lin Ft</th>
+            <th>8 ft Planks</th>
+          </tr>
+          <tr>
+            <td><strong>Ceiling (1×4 T&G)</strong></td>
+            <td>7 ft W × 6 ft D</td>
+            <td>42 sq ft ÷ (3.5" effective width) = ~144 sq ft face = 52 lin ft</td>
+            <td>52</td>
+            <td>6.5 → 7</td>
+          </tr>
+          <tr>
+            <td><strong>Walls (1×4 T&G)</strong></td>
+            <td>(7+6+7+6) × 7.5 = 260 sq ft</td>
+            <td>260 sq ft ÷ (3.5" eff.) = ~240 lin ft of 1×4</td>
+            <td>240</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <td><strong>Lower Bench Slats (2×4)</strong></td>
+            <td>7 ft long, 18" deep</td>
+            <td>~5 slats × 7 ft = 35 lin ft</td>
+            <td>35</td>
+            <td>4.4 → 5</td>
+          </tr>
+          <tr>
+            <td><strong>Upper Bench Slats (2×4)</strong></td>
+            <td>7 ft long, 24" deep</td>
+            <td>~7 slats × 7 ft = 49 lin ft</td>
+            <td>49</td>
+            <td>6.1 → 7</td>
+          </tr>
+          <tr>
+            <td><strong>Bench Frame (2×4)</strong></td>
+            <td>Support structure</td>
+            <td>~24 lin ft total frame</td>
+            <td>24</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td><strong>Corner Trim (1×1)</strong></td>
+            <td>4 corners × 7.5 ft</td>
+            <td>30 lin ft</td>
+            <td>30</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td><strong>Base Trim (1×2)</strong></td>
+            <td>Perimeter at floor</td>
+            <td>~26 ft perimeter = 26 lin ft</td>
+            <td>26</td>
+            <td>3.25 → 4</td>
+          </tr>
+          <tr>
+            <td><strong>Door Casing (1×4)</strong></td>
+            <td>Around 28" opening</td>
+            <td>~10 lin ft</td>
+            <td>10</td>
+            <td>1.25 → 2</td>
+          </tr>
+          <tr>
+            <td><strong>Guard Rail (1×2)</strong></td>
+            <td>3-sided around heater</td>
+            <td>~30 lin ft</td>
+            <td>30</td>
+            <td>3.75 → 4</td>
+          </tr>
+          <tr style="background: rgba(32, 128, 128, 0.2); font-weight: bold;">
+            <td colspan="3"><strong>TOTAL LINEAR FEET</strong></td>
+            <td><strong>496 lin ft</strong></td>
+            <td><strong>62 planks</strong></td>
+          </tr>
+        </table>
+
+        <h3>Cedar Order Recommendation</h3>
+        <div class="rule-highlight">
+          <p><strong>Order 56–62 eight-foot cedar planks</strong> (accounting for waste, cuts, and mistakes)</p>
+          <p style="margin-top: 8px;"><strong>Mix:</strong></p>
+          <ul style="margin-top: 8px; padding-left: 20px;">
+            <li>~30 planks of 1×4 T&G cedar (ceiling & walls)</li>
+            <li>~12 planks of 2×4 clear cedar (benches & frame)</li>
+            <li>~10 planks of 1×1 cedar (corner trim)</li>
+            <li>~6 planks of 1×2 cedar (base & guard rail)</li>
+          </ul>
+          <p style="margin-top: 12px;"><strong>Total Cost:</strong> $1,512–$2,240 (depending on clear grade vs standard)</p>
+        </div>
+
+        <h3>Cedar Sourcing Tips</h3>
+        <ul style="margin-left: 20px;">
+          <li><strong>Buy from local sawmill or specialty cedar supplier</strong> — better pricing than box stores</li>
+          <li><strong>Request "sauna grade" or "spa grade" cedar</strong> — kiln-dried, minimal knots</li>
+          <li><strong>T&G tongue-and-groove for walls/ceiling</strong> — standard for saunas</li>
+          <li><strong>Clear grade (select) for visible surfaces</strong> — premium appearance</li>
+          <li><strong>Standard grade for benches/frame</strong> — strength priority, appearance secondary</li>
+        </ul>
+
+        <h3>Wood Calculation Example</h3>
+        <p style="margin-bottom: 12px;"><strong>How to convert square feet to linear feet:</strong></p>
+        <div style="background: rgba(32, 128, 128, 0.08); padding: 12px; border-radius: 6px; margin: 12px 0;">
+          <p style="margin: 0;"><strong>Ceiling = 7 ft wide × 6 ft deep = 42 square feet</strong></p>
+          <p style="margin: 8px 0 0 0;">1×4 boards have an effective width of ~3.5" (accounting for tongue-and-groove overlap)</p>
+          <p style="margin: 8px 0 0 0;">Linear feet needed = (42 sq ft × 12 in/ft) ÷ 3.5" = 144 sq inches ÷ 3.5" = ~41 lin ft</p>
+          <p style="margin: 8px 0 0 0;">Round up to 52 lin ft (accounting for cuts & waste)</p>
+          <p style="margin: 8px 0 0 0;">52 lin ft ÷ 8 ft per plank = 6.5 planks → order 7 planks</p>
+        </div>
+
+        <h3>Quality Notes</h3>
+        <p><strong>Western Red Cedar (preferred):</strong> Naturally rot-resistant, aromatic, beautiful reddish tone, ideal for saunas</p>
+        <p><strong>Pricing (8 ft plank):</strong></p>
+        <ul style="margin-left: 20px;">
+          <li>1×4 T&G Clear Grade: $25–$35/plank</li>
+          <li>1×4 T&G Standard Grade: $15–$22/plank</li>
+          <li>2×4 Clear Grade: $18–$28/plank</li>
+        </ul>
       </div>
     </div>
 
@@ -1575,40 +1079,8 @@
       
       document.getElementById(tabName).classList.add('active');
       event.target.classList.add('active');
+      window.scrollTo(0, 0);
     }
-
-    function calculateHeaterSize() {
-      const width = parseFloat(document.getElementById('saunaWidth').value);
-      const depth = parseFloat(document.getElementById('saunaDepth').value);
-      const height = parseFloat(document.getElementById('saunaHeight').value);
-      const insulation = document.getElementById('insulationLevel').value;
-
-      const volume = width * depth * height;
-      let watts = 0;
-
-      // General rule: 1 kW per 50–75 cubic feet (insulation-dependent)
-      if (insulation === 'standard') {
-        watts = volume / 55;
-      } else if (insulation === 'good') {
-        watts = volume / 65;
-      } else {
-        watts = volume / 75;
-      }
-
-      const kwRecommended = Math.round(watts / 1000 * 10) / 10;
-      const kwMin = Math.max(3, Math.floor(kwRecommended - 1));
-      const kwMax = Math.ceil(kwRecommended + 1);
-
-      const result = document.getElementById('heaterResult');
-      result.style.display = 'block';
-      result.querySelector('#resultText').textContent = 
-        `Volume: ${Math.round(volume)} ft³ → Recommended heater: ${kwMin}–${kwMax} kW (ideal: ${kwRecommended} kW)`;
-    }
-
-    // Auto-calculate on page load
-    window.onload = function() {
-      calculateHeaterSize();
-    };
   </script>
 </body>
 </html>
